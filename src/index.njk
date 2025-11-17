@@ -1,0 +1,229 @@
+---
+layout: layouts/base.njk
+title: Achar Oiro | AWS Community Builder & Cloud Engineer
+description: Learn AWS, Kubernetes, and healthcare cloud architecture from an AWS Community Builder with clinical background. Practical tutorials, HIPAA compliance guides, and career transition stories.
+---
+
+<!-- Hero Section -->
+<section class="section bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white" id="top">
+  <div class="container-site">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Hero Content -->
+      <div>
+        <div class="mb-6">
+          <img src="https://i.postimg.cc/pLFQ13gF/Community-Builders-badge-800px.png"
+               alt="AWS Community Builder Badge"
+               class="h-20 w-auto mb-4"
+               loading="eager">
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">{{ site.name }}</h1>
+
+        <p class="text-2xl md:text-3xl mb-6 opacity-95">
+          AWS Community Builder specializing in healthcare cloud security, Kubernetes, and HIPAA-compliant architectures
+        </p>
+
+        <p class="text-xl mb-8 opacity-90">
+          Clinical Officer turned Cloud Engineer. Teaching healthcare teams to build secure, compliant cloud infrastructure.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/blog/" class="btn bg-white text-brand-blue hover:bg-gray-100 hover:scale-105 hover:no-underline">
+            Read the Blog
+          </a>
+          <a href="/hire/" class="btn border-2 border-white text-white hover:bg-white hover:text-brand-blue hover:no-underline">
+            Hire Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="flex justify-center">
+        <img src="https://i.postimg.cc/xCwngJHV/stella.jpg"
+             alt="{{ site.author.name }}"
+             class="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-white shadow-2xl object-cover"
+             loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured In Section -->
+<section class="section bg-gray-50">
+  <div class="container-site">
+    <h2 class="text-center text-text-secondary text-xl font-semibold mb-8">Trusted By & Featured In</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+      <!-- AWS Community Builders -->
+      <div class="text-center">
+        <p class="font-semibold text-gray-700">AWS Community<br>Builders</p>
+      </div>
+
+      <!-- Evarest Technologies -->
+      <div class="text-center">
+        <p class="font-semibold text-gray-700">Evarest<br>Technologies</p>
+      </div>
+
+      <!-- KMTC -->
+      <div class="text-center">
+        <p class="font-semibold text-gray-700">Kenya Medical<br>Training College</p>
+      </div>
+
+      <!-- Great Lakes University -->
+      <div class="text-center">
+        <p class="font-semibold text-gray-700">Great Lakes<br>University</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What You'll Learn Section -->
+<section class="section">
+  <div class="container-site">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">What You'll Learn</h2>
+      <p class="text-xl text-text-secondary">Practical cloud engineering skills from real-world healthcare projects</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for feature in site.features %}
+      <div class="card card-hover text-center">
+        <!-- Icon placeholder - you can replace with actual icons -->
+        <div class="w-16 h-16 bg-brand-blue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+
+        <h3 class="text-xl font-bold mb-3">{{ feature.title }}</h3>
+        <p class="text-text-secondary">{{ feature.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Recent Articles Section -->
+<section class="section bg-gray-50">
+  <div class="container-site">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Recent Articles</h2>
+        <p class="text-xl text-text-secondary">Practical tutorials and real-world cloud engineering insights</p>
+      </div>
+      <a href="/blog/" class="btn btn-secondary hidden md:inline-block hover:no-underline">View All</a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in collections.featuredPosts %}
+      <article class="card card-hover">
+        {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}"
+             class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy">
+        {% endif %}
+
+        <!-- Category Badge -->
+        {% if post.data.categories %}
+        <div class="mb-3">
+          <span class="badge badge-{{ post.data.categories[0] | lower }}">
+            {{ post.data.categories[0] }}
+          </span>
+        </div>
+        {% endif %}
+
+        <h3 class="text-xl font-bold mb-3">
+          <a href="{{ post.url }}" class="hover:text-brand-blue hover:no-underline">
+            {{ post.data.title }}
+          </a>
+        </h3>
+
+        <p class="text-text-secondary mb-4">
+          {{ post.templateContent | excerpt }}
+        </p>
+
+        <div class="flex items-center justify-between text-sm text-text-secondary">
+          <time datetime="{{ post.date }}">{{ post.date | readableDate }}</time>
+          <span>{{ post.templateContent | readingTime }} min read</span>
+        </div>
+
+        <a href="{{ post.url }}" class="text-brand-blue hover:text-blue-700 font-semibold mt-4 inline-block">
+          Read More →
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-12 md:hidden">
+      <a href="/blog/" class="btn btn-secondary hover:no-underline">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter CTA Section -->
+<section class="section bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+  <div class="container-site">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Join 500+ Cloud Engineers</h2>
+
+      <p class="text-xl md:text-2xl mb-8 opacity-95">
+        Get practical AWS tutorials, HIPAA compliance guides, and career advice delivered to your inbox weekly.
+      </p>
+
+      <div class="max-w-md mx-auto">
+        {% include "components/newsletter-form.njk" %}
+      </div>
+
+      <p class="text-sm mt-4 opacity-75">Join engineers from healthcare startups, tech companies, and government agencies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="section">
+  <div class="container-site">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div>
+        <img src="https://i.postimg.cc/xCwngJHV/stella.jpg"
+             alt="{{ site.author.name }}"
+             class="w-full rounded-lg shadow-xl"
+             loading="lazy">
+      </div>
+
+      <!-- Content -->
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm Achar 👋</h2>
+
+        <div class="prose">
+          <p class="text-lg mb-4">
+            I'm a Clinical Officer turned AWS Community Builder, and I help healthcare organizations build secure, scalable cloud infrastructure.
+          </p>
+
+          <p class="text-lg mb-4">
+            My journey didn't follow the traditional tech career path. I started in healthcare at the County Government of Migori, working directly with patients. But I saw how technology could transform healthcare delivery—and the gaps that needed fixing.
+          </p>
+
+          <p class="text-lg mb-6">
+            So I learned to code. Then cloud engineering. Then AWS. Not to leave healthcare, but to fix it from the inside.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+          <h3 class="text-lg font-bold mb-3">Credentials & Achievements:</h3>
+          <ul class="space-y-2 text-text-secondary">
+            <li>✓ AWS Community Builder</li>
+            <li>✓ Clinical Officer, County Government of Migori</li>
+            <li>✓ Co-founder, Evarest Technologies Ltd</li>
+            <li>✓ Masters Student, Clinical Medicine & Surgery</li>
+            <li>✓ Lecturer, Kenya Medical Training College</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/about/" class="btn btn-secondary hover:no-underline">Read My Full Story</a>
+          <a href="/hire/" class="btn btn-primary hover:no-underline">Work With Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

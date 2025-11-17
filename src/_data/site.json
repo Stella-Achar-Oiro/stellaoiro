@@ -1,0 +1,63 @@
+{
+  "name": "Achar Oiro",
+  "title": "Achar Oiro | AWS Community Builder & Cloud Engineer",
+  "description": "Learn AWS, Kubernetes, and healthcare cloud architecture from an AWS Community Builder with clinical background. Practical tutorials, HIPAA compliance guides, and career transition stories.",
+  "url": "https://acharoiro.com",
+  "author": {
+    "name": "Achar Oiro",
+    "email": "stellaacharoiro@gmail.com",
+    "title": "AWS Community Builder & Cloud Engineer",
+    "bio": "Clinical Officer turned Cloud Engineer. AWS Community Builder helping healthcare teams build secure, HIPAA-compliant cloud infrastructure.",
+    "avatar": "/assets/images/stella.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/achar-oiro",
+      "github": "https://github.com/achar-oiro",
+      "twitter": "https://twitter.com/achar-oiro"
+    }
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "name": "About",
+      "url": "/about/"
+    },
+    {
+      "name": "Resources",
+      "url": "/resources/"
+    },
+    {
+      "name": "Hire Me",
+      "url": "/hire/",
+      "highlight": true
+    }
+  ],
+  "features": [
+    {
+      "title": "AWS & Cloud Engineering",
+      "icon": "cloud",
+      "description": "Master AWS services, architecture patterns, and best practices from real-world projects"
+    },
+    {
+      "title": "Healthcare Technology",
+      "icon": "health",
+      "description": "Build HIPAA-compliant systems with cloud security and patient data protection"
+    },
+    {
+      "title": "Kubernetes & KCNA",
+      "icon": "container",
+      "description": "Learn container orchestration, networking fundamentals, and certification prep"
+    },
+    {
+      "title": "Career Transition",
+      "icon": "career",
+      "description": "Navigate the path from healthcare to tech with practical guidance and resources"
+    }
+  ]
+}

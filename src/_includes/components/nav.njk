@@ -1,0 +1,43 @@
+<nav class="sticky top-0 z-50 bg-white border-b border-border-gray shadow-sm">
+  <div class="container-site">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo/Brand -->
+      <a href="/" class="flex items-center space-x-2 hover:no-underline">
+        <span class="text-2xl font-bold text-text-primary">{{ site.name }}</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {% for item in site.navigation %}
+          {% if item.highlight %}
+            <a href="{{ item.url }}" class="nav-cta hover:no-underline">
+              {{ item.name }}
+            </a>
+          {% else %}
+            <a href="{{ item.url }}"
+               class="nav-link hover:no-underline {% if page.url == item.url %}nav-link-active{% endif %}">
+              {{ item.name }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      {% for item in site.navigation %}
+        <a href="{{ item.url }}"
+           class="block py-2 px-4 hover:bg-gray-50 rounded {% if item.highlight %}font-semibold text-brand-green{% endif %}">
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

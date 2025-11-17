@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-text-primary leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold leading-tight;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-lg leading-relaxed mb-4;
+  }
+
+  a {
+    @apply text-brand-blue hover:underline transition-colors;
+  }
+
+  code {
+    @apply font-code text-sm bg-code-bg px-2 py-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200 inline-block text-center;
+  }
+
+  .btn-primary {
+    @apply bg-brand-green text-white hover:bg-green-600 hover:shadow-lg hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-brand-blue border-2 border-brand-blue hover:bg-brand-blue hover:text-white;
+  }
+
+  .btn-outline {
+    @apply border-2 border-current hover:bg-current hover:text-white;
+  }
+
+  .card {
+    @apply bg-white border border-border-gray rounded-lg p-6 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-site {
+    @apply max-w-site mx-auto px-4 md:px-8;
+  }
+
+  .container-content {
+    @apply max-w-content mx-auto px-4;
+  }
+
+  /* Article Content Styles */
+  .prose {
+    @apply text-lg leading-relaxed;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-bold mt-12 mb-6;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  .prose h4 {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply mb-6;
+  }
+
+  .prose ul, .prose ol {
+    @apply mb-6 ml-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-brand-blue pl-6 py-2 my-6 italic text-text-secondary;
+  }
+
+  .prose pre {
+    @apply bg-gray-900 text-gray-100 rounded-lg p-6 overflow-x-auto my-6;
+  }
+
+  .prose img {
+    @apply rounded-lg my-8 shadow-md;
+  }
+
+  .prose a {
+    @apply text-brand-blue hover:text-blue-700 underline;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply text-text-primary hover:text-brand-blue transition-colors font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-brand-blue;
+  }
+
+  .nav-cta {
+    @apply bg-brand-green text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-all hover:shadow-md;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-aws {
+    @apply bg-orange-100 text-orange-800;
+  }
+
+  .badge-kubernetes {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-healthcare {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-tutorial {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3 border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent min-h-32;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold mb-2 text-text-primary;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Code Syntax Highlighting Overrides */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6c7a89;
+}
+
+.token.punctuation {
+  color: #d1d5db;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f87171;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #34d399;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #60a5fa;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a78bfa;
+}
+
+.token.function,
+.token.class-name {
+  color: #fbbf24;
+}

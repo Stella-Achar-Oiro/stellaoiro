@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+title: Blog - AWS Tutorials, Healthcare Cloud & Kubernetes Guides
+description: Technical tutorials, real-world cloud architecture patterns, HIPAA compliance guides, and career advice for developers entering cloud engineering
+permalink: /blog/
+---
+
+<section class="section">
+  <div class="container-site">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-6">Blog</h1>
+      <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+        Practical AWS tutorials, HIPAA compliance guides, Kubernetes fundamentals, and career transition stories from the field
+      </p>
+    </div>
+
+    <!-- Filter/Category Bar -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <a href="/blog/" class="badge bg-brand-blue text-white">All</a>
+      <a href="/blog/categories/aws/" class="badge badge-aws">AWS</a>
+      <a href="/blog/categories/kubernetes/" class="badge badge-kubernetes">Kubernetes</a>
+      <a href="/blog/categories/healthcare/" class="badge badge-healthcare">Healthcare</a>
+      <a href="/blog/categories/tutorial/" class="badge badge-tutorial">Tutorials</a>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for post in collections.posts %}
+      <article class="card card-hover">
+        {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}"
+             class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy">
+        {% endif %}
+
+        <!-- Category Badges -->
+        {% if post.data.categories %}
+        <div class="mb-3 flex flex-wrap gap-2">
+          {% for category in post.data.categories %}
+          <span class="badge badge-{{ category | lower }}">{{ category }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <h2 class="text-xl font-bold mb-3">
+          <a href="{{ post.url }}" class="hover:text-brand-blue hover:no-underline">
+            {{ post.data.title }}
+          </a>
+        </h2>
+
+        <p class="text-text-secondary mb-4">
+          {{ post.data.description or (post.templateContent | excerpt) }}
+        </p>
+
+        <div class="flex items-center justify-between text-sm text-text-secondary mb-3">
+          <time datetime="{{ post.date }}">{{ post.date | readableDate }}</time>
+          <span>{{ post.templateContent | readingTime }} min read</span>
+        </div>
+
+        <a href="{{ post.url }}" class="text-brand-blue hover:text-blue-700 font-semibold inline-block">
+          Read More →
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Newsletter CTA -->
+    <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-12 text-center">
+      <h3 class="text-3xl font-bold mb-4">Never Miss a Tutorial</h3>
+      <p class="text-xl mb-6 opacity-90">
+        Join 500+ cloud engineers getting practical AWS tutorials and HIPAA compliance guides weekly
+      </p>
+      <div class="max-w-md mx-auto">
+        {% include "components/newsletter-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>

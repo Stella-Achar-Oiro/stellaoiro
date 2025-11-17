@@ -1,0 +1,107 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="section">
+  <div class="container-content">
+    <!-- Breadcrumb -->
+    <nav class="mb-8 text-sm">
+      <a href="/" class="text-brand-blue hover:underline">Home</a>
+      <span class="mx-2 text-text-secondary">/</span>
+      <a href="/blog/" class="text-brand-blue hover:underline">Blog</a>
+      <span class="mx-2 text-text-secondary">/</span>
+      <span class="text-text-secondary">{{ title }}</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="mb-12">
+      <!-- Category Tags -->
+      {% if categories %}
+      <div class="mb-4 flex flex-wrap gap-2">
+        {% for category in categories %}
+        <span class="badge badge-{{ category | lower }}">{{ category }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ title }}</h1>
+
+      <!-- Meta Information -->
+      <div class="flex flex-wrap items-center gap-4 text-text-secondary">
+        <div class="flex items-center gap-2">
+          <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}" class="w-10 h-10 rounded-full">
+          <span class="font-medium">{{ author or site.author.name }}</span>
+        </div>
+        <span>•</span>
+        <time datetime="{{ date }}">{{ date | readableDate }}</time>
+        <span>•</span>
+        <span>{{ content | readingTime }} min read</span>
+      </div>
+
+      <!-- Social Share -->
+      <div class="mt-6 flex gap-3">
+        <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ site.url }}{{ page.url | urlencode }}"
+           target="_blank" rel="noopener noreferrer"
+           class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm font-medium">
+          Share on Twitter
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | urlencode }}"
+           target="_blank" rel="noopener noreferrer"
+           class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 text-sm font-medium">
+          Share on LinkedIn
+        </a>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {% if image %}
+    <img src="{{ image }}" alt="{{ imageAlt or title }}" class="w-full rounded-lg shadow-lg mb-12">
+    {% endif %}
+
+    <!-- Article Content -->
+    <div class="prose max-w-none">
+      {{ content | safe }}
+    </div>
+
+    <!-- Article Footer -->
+    <footer class="mt-16 pt-8 border-t border-border-gray">
+      <!-- Tags -->
+      {% if tags %}
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold mb-3">Tags:</h3>
+        <div class="flex flex-wrap gap-2">
+          {% for tag in tags %}
+          <a href="/blog/tags/{{ tag | slug }}/" class="badge bg-gray-100 text-gray-800 hover:bg-gray-200">
+            #{{ tag }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Author Bio Card -->
+      <div class="bg-gray-50 rounded-lg p-6 flex flex-col md:flex-row gap-6 items-start">
+        <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}" class="w-24 h-24 rounded-full">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold mb-2">About {{ site.author.name }}</h3>
+          <p class="text-text-secondary mb-4">{{ site.author.bio }}</p>
+          <div class="flex gap-3">
+            <a href="/hire/" class="btn btn-primary">Hire Me</a>
+            <a href="/about/" class="btn btn-secondary">Read My Story</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Newsletter CTA -->
+  <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="container-content py-12">
+      <div class="text-center max-w-2xl mx-auto">
+        <h3 class="text-3xl font-bold mb-4">Enjoyed this article?</h3>
+        <p class="text-xl mb-6 opacity-90">Get more AWS tutorials, HIPAA compliance guides, and career advice delivered to your inbox weekly.</p>
+        {% include "components/newsletter-form.njk" %}
+      </div>
+    </div>
+  </div>
+</article>
