@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: 404 - Page Not Found
+description: Sorry, the page you're looking for doesn't exist
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="section min-h-screen flex items-center justify-center bg-gray-50">
+  <div class="container-site text-center">
+    <div class="max-w-2xl mx-auto">
+      <!-- 404 Icon -->
+      <div class="mb-8">
+        <svg class="w-32 h-32 mx-auto text-brand-blue opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+
+      <!-- Error Message -->
+      <h1 class="text-6xl md:text-8xl font-bold text-brand-blue mb-4">404</h1>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Page Not Found</h2>
+      <p class="text-xl text-text-secondary mb-8">
+        Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+      </p>
+
+      <!-- Helpful Links -->
+      <div class="mb-12">
+        <p class="text-lg mb-6">Here are some helpful links instead:</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="btn btn-primary hover:no-underline">
+            Go Home
+          </a>
+          <a href="/blog/" class="btn btn-secondary hover:no-underline">
+            Read the Blog
+          </a>
+          <a href="/about/" class="btn btn-secondary hover:no-underline">
+            About Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Popular Posts -->
+      <div class="bg-white rounded-lg p-8 shadow-md text-left">
+        <h3 class="text-2xl font-bold mb-6 text-center">Popular Articles</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/blog/posts/clinical-officer-to-aws-community-builder/" class="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+            <h4 class="font-bold text-brand-blue mb-2">Clinical Officer to AWS Community Builder</h4>
+            <p class="text-sm text-text-secondary">My career transition story</p>
+          </a>
+          <a href="/blog/posts/hipaa-compliant-s3-buckets/" class="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+            <h4 class="font-bold text-brand-blue mb-2">Building HIPAA-Compliant S3 Buckets</h4>
+            <p class="text-sm text-text-secondary">Complete security guide</p>
+          </a>
+          <a href="/blog/posts/aws-services-for-healthcare-startups/" class="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+            <h4 class="font-bold text-brand-blue mb-2">5 AWS Services for Healthcare Startups</h4>
+            <p class="text-sm text-text-secondary">Essential AWS services</p>
+          </a>
+          <a href="/blog/posts/kcna-study-plan/" class="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+            <h4 class="font-bold text-brand-blue mb-2">KCNA Study Plan: 30 Days</h4>
+            <p class="text-sm text-text-secondary">Kubernetes certification guide</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="mt-8 text-text-secondary">
+        <p>Need help? <a href="/hire/" class="text-brand-blue font-semibold hover:underline">Contact me</a> or <a href="mailto:stellaacharoiro@gmail.com" class="text-brand-blue font-semibold hover:underline">send an email</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>

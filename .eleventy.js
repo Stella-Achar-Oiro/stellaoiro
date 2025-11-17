@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   // Copy assets
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
