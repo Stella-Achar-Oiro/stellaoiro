@@ -95,17 +95,17 @@ Theory is great. Production systems are better.
 
 At **Evarest Technologies**, we've built:
 
-### Gojiberri (AI Medical Transcription)
-- Processes sensitive patient conversations using AWS Lambda
-- Implements end-to-end encryption for PHI
-- Handles HIPAA compliance requirements
-- Deployed on AWS with CloudFront for global distribution
-
 ### Kintaraa (GBV Prevention Platform)
 - Blockchain platform supporting 847 survivors across Kisumu County
 - 1,203 incident reports processed securely
 - AWS infrastructure for sensitive data handling
 - Real-time alert systems for emergency response
+
+### Healthcare Data Systems
+- HIPAA-compliant medical record processing systems
+- Secure telemedicine platforms with end-to-end encryption
+- Real-time patient monitoring dashboards
+- EHR integration systems for healthcare startups
 
 These aren't tutorial projects. They're production systems affecting real lives.
 

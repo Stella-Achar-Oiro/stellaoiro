@@ -41,9 +41,10 @@ And when I teach AWS to developers, I use real-world healthcare scenarios becaus
 
 At **Evarest Technologies Ltd**, I architect cloud infrastructure for medical applications. Recent projects include:
 
-- **Gojiberri**: AI-powered medical transcription system processing sensitive patient data
 - **Kintaraa**: Blockchain platform for gender-based violence prevention (847 survivors, 1,203 incident reports across Kisumu County)
 - HIPAA-compliant EHR integrations for healthcare startups
+- Secure telemedicine platforms with real-time video consultation
+- Medical data processing systems with end-to-end encryption
 
 ### ☁️ AWS Community Building
 
@@ -111,7 +112,6 @@ I'm a father to Daniella Hera, who keeps me grounded and reminds me why building
 - ✓ Co-founder, Evarest Technologies Ltd
 - ✓ Masters Student, Clinical Medicine & Surgery (Great Lakes University of Kisumu)
 - ✓ Lecturer, Kenya Medical Training College
-- ✓ Co-founder, Gojiberri (AI Medical Transcription)
 - ✓ Technical Lead, Kintaraa (GBV Prevention Platform)
 
 ## Let's Build Something

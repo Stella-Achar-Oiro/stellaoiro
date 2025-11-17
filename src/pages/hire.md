@@ -105,7 +105,7 @@ permalink: /hire/
 <div class="text-center">
   <div class="text-4xl mb-3">🏗️</div>
   <h4 class="text-xl font-bold mb-2">Production Systems</h4>
-  <p class="text-text-secondary">Built Gojiberri, Kintaraa, and other systems handling real patient data and critical workflows</p>
+  <p class="text-text-secondary">Built Kintaraa and multiple healthcare systems handling real patient data and critical workflows</p>
 </div>
 
 <div class="text-center">
