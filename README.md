@@ -2,7 +2,7 @@
 
 Professional tech blog for AWS Community Builder Achar Oiro. Built with 11ty, Tailwind CSS, and deployed on AWS/Netlify.
 
-🌐 **Live Site**: [acharoiro.com](https://acharoiro.com)
+🌐 **Live Site**: [stellaoiro.com](https://stellaoiro.com)
 
 ## About
 
@@ -197,12 +197,12 @@ npm run build
 
 1. **Create S3 Bucket**
 ```bash
-aws s3 mb s3://acharoiro-tech-blog --region us-east-1
+aws s3 mb s3://stellaoiro-tech-blog --region us-east-1
 ```
 
 2. **Enable Static Website Hosting**
 ```bash
-aws s3 website s3://acharoiro-tech-blog/ \
+aws s3 website s3://stellaoiro-tech-blog/ \
   --index-document index.html \
   --error-document 404.html
 ```
@@ -215,7 +215,7 @@ npm run build:css
 
 4. **Deploy to S3**
 ```bash
-aws s3 sync _site/ s3://acharoiro-tech-blog --delete
+aws s3 sync _site/ s3://stellaoiro-tech-blog --delete
 ```
 
 5. **Create CloudFront Distribution**
@@ -237,7 +237,7 @@ npm run build
 npm run build:css
 
 # Sync to S3
-aws s3 sync _site/ s3://acharoiro-tech-blog --delete
+aws s3 sync _site/ s3://stellaoiro-tech-blog --delete
 
 # Invalidate CloudFront cache
 aws cloudfront create-invalidation \
@@ -359,7 +359,7 @@ Create API endpoint and update form action in:
 2. Add script to base layout:
 
 ```html
-<script defer data-domain="acharoiro.com" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="stellaoiro.com" src="https://plausible.io/js/script.js"></script>
 ```
 
 ## SEO Optimization
@@ -461,9 +461,9 @@ This is a personal blog, but if you find issues or have suggestions:
 ## Contact
 
 **Achar Oiro**
-- Website: [acharoiro.com](https://acharoiro.com)
+- Website: [stellaoiro.com](https://stellaoiro.com)
 - Email: stellaacharoiro@gmail.com
-- LinkedIn: [linkedin.com/in/achar-oiro](https://linkedin.com/in/achar-oiro)
+- LinkedIn: [linkedin.com/in/stella-oiro](https://linkedin.com/in/stella-oiro)
 - GitHub: [github.com/Stella-Achar-Oiro](https://github.com/Stella-Achar-Oiro)
 
 ## Acknowledgments

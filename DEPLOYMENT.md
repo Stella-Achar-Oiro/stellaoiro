@@ -99,22 +99,22 @@ npm run build
 
 ```bash
 # Create bucket (replace with your domain name)
-aws s3 mb s3://acharoiro.com --region us-east-1
+aws s3 mb s3://stellaoiro.com --region us-east-1
 
 # Enable static website hosting
-aws s3 website s3://acharoiro.com/ \
+aws s3 website s3://stellaoiro.com/ \
   --index-document index.html \
   --error-document 404.html
 
 # Make bucket public (for website hosting)
-aws s3api put-bucket-policy --bucket acharoiro.com --policy '{
+aws s3api put-bucket-policy --bucket stellaoiro.com --policy '{
   "Version": "2012-10-17",
   "Statement": [{
     "Sid": "PublicReadGetObject",
     "Effect": "Allow",
     "Principal": "*",
     "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::acharoiro.com/*"
+    "Resource": "arn:aws:s3:::stellaoiro.com/*"
   }]
 }'
 ```
@@ -126,10 +126,10 @@ aws s3api put-bucket-policy --bucket acharoiro.com --policy '{
 chmod +x deploy-aws.sh
 
 # Deploy to S3
-./deploy-aws.sh acharoiro.com
+./deploy-aws.sh stellaoiro.com
 
 # Or deploy with CloudFront invalidation
-./deploy-aws.sh acharoiro.com E1234CLOUDFRONT
+./deploy-aws.sh stellaoiro.com E1234CLOUDFRONT
 ```
 
 ### Step 4: Set Up CloudFront
@@ -146,7 +146,7 @@ chmod +x deploy-aws.sh
 # Via AWS Console (easier):
 1. Go to CloudFront console
 2. Create Distribution
-3. Origin Domain: acharoiro.com.s3-website-us-east-1.amazonaws.com
+3. Origin Domain: stellaoiro.com.s3-website-us-east-1.amazonaws.com
 4. Viewer Protocol Policy: Redirect HTTP to HTTPS
 5. Default Root Object: index.html
 6. Create distribution
@@ -162,11 +162,11 @@ resource "aws_cloudfront_distribution" "blog" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  aliases             = ["acharoiro.com", "www.acharoiro.com"]
+  aliases             = ["stellaoiro.com", "www.stellaoiro.com"]
 
   origin {
     domain_name = aws_s3_bucket.blog.website_endpoint
-    origin_id   = "S3-acharoiro.com"
+    origin_id   = "S3-stellaoiro.com"
 
     custom_origin_config {
       http_port              = 80
@@ -179,7 +179,7 @@ resource "aws_cloudfront_distribution" "blog" {
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = "S3-acharoiro.com"
+    target_origin_id       = "S3-stellaoiro.com"
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
 
@@ -220,8 +220,8 @@ resource "aws_cloudfront_distribution" "blog" {
 ```bash
 # Request certificate (must be in us-east-1 for CloudFront)
 aws acm request-certificate \
-  --domain-name acharoiro.com \
-  --subject-alternative-names www.acharoiro.com \
+  --domain-name stellaoiro.com \
+  --subject-alternative-names www.stellaoiro.com \
   --validation-method DNS \
   --region us-east-1
 
@@ -234,7 +234,7 @@ aws acm request-certificate \
 ```bash
 # Create hosted zone
 aws route53 create-hosted-zone \
-  --name acharoiro.com \
+  --name stellaoiro.com \
   --caller-reference $(date +%s)
 
 # Create A record pointing to CloudFront
@@ -247,7 +247,7 @@ aws route53 create-hosted-zone \
   "Changes": [{
     "Action": "CREATE",
     "ResourceRecordSet": {
-      "Name": "acharoiro.com",
+      "Name": "stellaoiro.com",
       "Type": "A",
       "AliasTarget": {
         "HostedZoneId": "Z2FDTNDATAQYW2",
@@ -299,7 +299,7 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync _site/ s3://acharoiro.com --delete
+        aws s3 sync _site/ s3://stellaoiro.com --delete
 
     - name: Invalidate CloudFront
       run: |
@@ -363,10 +363,10 @@ Create `vercel.json`:
 ### SEO Setup
 
 - [ ] Submit sitemap to Google Search Console
-  - URL: `https://acharoiro.com/sitemap.xml`
+  - URL: `https://stellaoiro.com/sitemap.xml`
 - [ ] Submit to Bing Webmaster Tools
 - [ ] Verify robots.txt is accessible
-  - URL: `https://acharoiro.com/robots.txt`
+  - URL: `https://stellaoiro.com/robots.txt`
 - [ ] Check Open Graph tags with [Open Graph Debugger](https://www.opengraph.xyz/)
 - [ ] Check Twitter Cards with [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 
@@ -392,7 +392,7 @@ Create `vercel.json`:
 
 - [ ] Run Lighthouse audit (target 90+ in all categories)
   ```bash
-  npx lighthouse https://acharoiro.com --view
+  npx lighthouse https://stellaoiro.com --view
   ```
 - [ ] Check mobile performance
 - [ ] Verify images are optimized and lazy-loaded
@@ -403,7 +403,7 @@ Create `vercel.json`:
 - [ ] Enable HTTPS (via CloudFront or Netlify)
 - [ ] Check security headers:
   ```bash
-  curl -I https://acharoiro.com
+  curl -I https://stellaoiro.com
   ```
   Should include:
   - `Strict-Transport-Security`
@@ -441,7 +441,7 @@ git push origin main
 npm run build && npm run build:css
 
 # Deploy
-./deploy-aws.sh acharoiro.com E1234CLOUDFRONT
+./deploy-aws.sh stellaoiro.com E1234CLOUDFRONT
 
 # Or use GitHub Actions (automatic on push)
 ```

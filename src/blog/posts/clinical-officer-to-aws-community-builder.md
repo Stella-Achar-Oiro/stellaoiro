@@ -222,7 +222,7 @@ If you're somewhere in between, you're exactly where the world needs you.
 Are you a healthcare professional considering a move into tech? I'd love to hear your story and answer your questions.
 
 **Email**: stellaacharoiro@gmail.com
-**LinkedIn**: [Connect with me](https://linkedin.com/in/achar-oiro)
+**LinkedIn**: [Connect with me](https://linkedin.com/in/stella-oiro)
 **Twitter**: Share your journey with #HealthcareTech
 
 **Next Steps:**

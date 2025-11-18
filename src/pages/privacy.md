@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Privacy Policy
-description: Privacy Policy for acharoiro.com
+description: Privacy Policy for stellaoiro.com
 permalink: /privacy/
 ---
 
@@ -9,7 +9,7 @@ permalink: /privacy/
 
 ## Introduction
 
-This Privacy Policy explains how Achar Oiro ("we," "us," or "our") collects, uses, and protects your personal information when you visit our website acharoiro.com (the "Site").
+This Privacy Policy explains how Achar Oiro ("we," "us," or "our") collects, uses, and protects your personal information when you visit our website stellaoiro.com (the "Site").
 
 We are committed to protecting your privacy and ensuring you understand what information we collect and how we use it.
 
@@ -185,7 +185,7 @@ Material changes will be notified via:
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
 **Email**: stellaacharoiro@gmail.com
-**Website**: [acharoiro.com](https://acharoiro.com)
+**Website**: [stellaoiro.com](https://stellaoiro.com)
 
 ## Governing Law
 

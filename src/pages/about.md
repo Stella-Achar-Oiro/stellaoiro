@@ -130,8 +130,8 @@ Whether you're a healthcare startup needing cloud architecture, a tech team want
 ## Connect With Me
 
 - 📧 **Email**: [stellaacharoiro@gmail.com](mailto:stellaacharoiro@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/achar-oiro](https://linkedin.com/in/achar-oiro)
-- 🐙 **GitHub**: [github.com/achar-oiro](https://github.com/achar-oiro)
+- 💼 **LinkedIn**: [linkedin.com/in/stella-oiro](https://linkedin.com/in/stella-oiro)
+- 🐙 **GitHub**: [github.com/stella-oiro](https://github.com/stella-oiro)
 - 📅 **Schedule a Call**: Book a free 30-min consultation
 
 ---

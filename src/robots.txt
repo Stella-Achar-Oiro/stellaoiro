@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acharoiro.com/sitemap.xml
+Sitemap: https://stellaoiro.com/sitemap.xml
 
 # Block admin areas (if any)
 Disallow: /admin/

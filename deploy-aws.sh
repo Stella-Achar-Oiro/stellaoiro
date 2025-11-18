@@ -12,7 +12,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Configuration
-BUCKET_NAME=${1:-"acharoiro-tech-blog"}
+BUCKET_NAME=${1:-"stellaoiro-tech-blog"}
 CLOUDFRONT_ID=${2:-""}
 
 echo -e "${GREEN}========================================${NC}"

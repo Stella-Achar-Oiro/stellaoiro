@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Terms of Service
-description: Terms of Service for acharoiro.com
+description: Terms of Service for stellaoiro.com
 permalink: /terms/
 ---
 
@@ -9,7 +9,7 @@ permalink: /terms/
 
 ## Agreement to Terms
 
-By accessing and using acharoiro.com (the "Site"), you accept and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site.
+By accessing and using stellaoiro.com (the "Site"), you accept and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site.
 
 ## Use of the Site
 
@@ -268,7 +268,7 @@ These Terms, together with our Privacy Policy, constitute the entire agreement b
 For questions about these Terms, please contact us:
 
 **Email**: stellaacharoiro@gmail.com
-**Website**: [acharoiro.com](https://acharoiro.com)
+**Website**: [stellaoiro.com](https://stellaoiro.com)
 
 ## Acknowledgment
 

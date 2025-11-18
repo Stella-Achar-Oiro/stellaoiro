@@ -793,8 +793,8 @@ I'll update this post with my exam results and lessons learned.
 
 **Follow my journey:**
 - [My blog](/blog/)
-- [LinkedIn](https://linkedin.com/in/achar-oiro)
-- [Twitter](https://twitter.com/achar-oiro)
+- [LinkedIn](https://linkedin.com/in/stella-oiro)
+- [Twitter](https://twitter.com/stella-oiro)
 
 ## Conclusion
 
