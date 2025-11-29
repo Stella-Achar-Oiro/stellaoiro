@@ -1,48 +1,94 @@
+'use client'
+
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+const codeExamples = [
+  { lang: 'Python', code: `import requests\n\nresponse = requests.get(\n  'https://api.example.com/v1/users',\n  headers={'Authorization': 'Bearer TOKEN'}\n)\nprint(response.json())` },
+  { lang: 'JavaScript', code: `fetch('https://api.example.com/v1/users', {\n  headers: {\n    'Authorization': 'Bearer TOKEN'\n  }\n})\n.then(res => res.json())\n.then(data => console.log(data))` },
+  { lang: 'cURL', code: `curl -X GET \\\n  'https://api.example.com/v1/users' \\\n  -H 'Authorization: Bearer TOKEN'` },
+]
 
 export default function Hero() {
+  const [activeCode, setActiveCode] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCode((prev) => (prev + 1) % codeExamples.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-            Technical Writer & Documentation Specialist
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block mb-6 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              Technical Writer & Documentation Specialist
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-purple-600 bg-clip-text text-transparent">
+              Documentation That Developers Actually Use
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
+              I create clear, accurate API docs, developer guides, and technical content that turns confused users into confident builders.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/contact" className="btn-primary text-lg">
+                Start Your Project
+              </Link>
+              <Link href="/portfolio" className="btn-secondary text-lg">
+                View Portfolio
+              </Link>
+            </div>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-purple-600 bg-clip-text text-transparent">
-            Documentation That Developers Actually Use
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
-            I create clear, accurate API docs, developer guides, and technical content that turns confused users into confident builders.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg">
-              Start Your Project
-            </Link>
-            <Link href="/portfolio" className="btn-secondary text-lg">
-              View Portfolio
-            </Link>
+
+          <div className="relative">
+            <div className="bg-gray-900 rounded-xl shadow-strong p-6">
+              <div className="flex gap-2 mb-4">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="flex gap-2 mb-4 border-b border-gray-700 pb-2">
+                {codeExamples.map((example, idx) => (
+                  <button
+                    key={example.lang}
+                    onClick={() => setActiveCode(idx)}
+                    className={`px-3 py-1 text-sm rounded transition-colors ${
+                      activeCode === idx ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    {example.lang}
+                  </button>
+                ))}
+              </div>
+              <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+                <code>{codeExamples[activeCode].code}</code>
+              </pre>
+            </div>
           </div>
-          
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-gray-600">Projects Delivered</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">24h</div>
-              <div className="text-gray-600">Response Time</div>
-            </div>
+        </div>
+
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">50+</div>
+            <div className="text-gray-600">Projects Delivered</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">98%</div>
+            <div className="text-gray-600">Client Satisfaction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">5+</div>
+            <div className="text-gray-600">Years Experience</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">24h</div>
+            <div className="text-gray-600">Response Time</div>
           </div>
         </div>
       </div>
