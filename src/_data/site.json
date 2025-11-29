@@ -1,7 +1,7 @@
 {
   "name": "Achar Oiro",
-  "title": "Achar Oiro | Technical Writer + Developer",
-  "description": "Technical documentation that developers actually want to read. API docs, developer guides, and SaaS documentation that reduces support tickets and accelerates user success.",
+  "title": "Technical Writer for API, SaaS and Developer Documentation | Achar Oiro",
+  "description": "I help engineering teams and SaaS companies create clear, scalable and developer-ready documentation that improves adoption and reduces support load.",
   "url": "https://stellaoiro.com",
   "author": {
     "name": "Achar Oiro",
@@ -29,11 +29,19 @@
       "url": "/portfolio/"
     },
     {
+      "name": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "name": "Tools",
+      "url": "/tools/"
+    },
+    {
       "name": "About",
       "url": "/about/"
     },
     {
-      "name": "Hire Me",
+      "name": "Contact",
       "url": "/hire/",
       "highlight": true
     }
