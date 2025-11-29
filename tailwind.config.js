@@ -1,38 +1,51 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,njk,md,js}",
-    "./src/_includes/**/*.{html,njk,md,js}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        // Brand colors from PRD
-        'brand-blue': '#2563EB',
-        'brand-orange': '#FF6B35',
-        'brand-green': '#10B981',
-        'text-primary': '#1F2937',
-        'text-secondary': '#6B7280',
-        'border-gray': '#E5E7EB',
-        'code-bg': '#F3F4F6',
+        primary: {
+          DEFAULT: '#0A7AFF',
+          dark: '#0053D6',
+          light: '#4DA3FF',
+        },
+        dark: {
+          DEFAULT: '#0F1419',
+          lighter: '#1A1F26',
+        },
+        gray: {
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+          500: '#6B7280',
+          600: '#4B5563',
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827',
+        },
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'heading': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'code': ['JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Source Serif Pro', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
-      spacing: {
-        'xs': '8px',
-        'sm': '16px',
-        'md': '24px',
-        'lg': '32px',
-        'xl': '48px',
-        '2xl': '64px',
-        '3xl': '96px',
+      fontSize: {
+        'display': ['4.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+        'h1': ['3.5rem', { lineHeight: '1.2', fontWeight: '700' }],
+        'h2': ['2.5rem', { lineHeight: '1.3', fontWeight: '600' }],
+        'h3': ['2rem', { lineHeight: '1.4', fontWeight: '600' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.75' }],
+        'body': ['1rem', { lineHeight: '1.75' }],
       },
-      maxWidth: {
-        'content': '800px',
-        'site': '1200px',
+      boxShadow: {
+        'soft': '0 2px 8px rgba(0, 0, 0, 0.08)',
+        'medium': '0 4px 16px rgba(0, 0, 0, 0.12)',
+        'strong': '0 8px 32px rgba(0, 0, 0, 0.16)',
       },
     },
   },

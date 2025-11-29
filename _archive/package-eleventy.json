@@ -1,0 +1,33 @@
+{
+  "name": "stellaoiro-tech-blog",
+  "version": "1.0.0",
+  "description": "Professional tech blog for AWS Community Builder Achar Oiro",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "build:css": "tailwindcss -i src/css/tailwind.css -o _site/css/styles.css --minify",
+    "dev": "concurrently \"eleventy --serve\" \"tailwindcss -i src/css/tailwind.css -o _site/css/styles.css --watch\"",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:54185/git/Stella-Achar-Oiro/stellaoiro"
+  },
+  "keywords": [
+    "aws",
+    "cloud-engineering",
+    "healthcare-tech",
+    "blog",
+    "eleventy"
+  ],
+  "author": "Achar Oiro",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}
