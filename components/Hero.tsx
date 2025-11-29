@@ -47,28 +47,33 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="bg-gray-900 rounded-xl shadow-strong p-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
+            <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl shadow-strong p-6 border border-white/20">
               <div className="flex gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="w-3 h-3 rounded-full bg-red-500 shadow-lg"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500 shadow-lg"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500 shadow-lg"></div>
               </div>
-              <div className="flex gap-2 mb-4 border-b border-gray-700 pb-2">
+              <div className="flex gap-2 mb-4 border-b border-white/10 pb-2">
                 {codeExamples.map((example, idx) => (
                   <button
                     key={example.lang}
                     onClick={() => setActiveCode(idx)}
-                    className={`px-3 py-1 text-sm rounded transition-colors ${
-                      activeCode === idx ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'
+                    className={`px-3 py-1 text-sm rounded-lg transition-all ${
+                      activeCode === idx 
+                        ? 'bg-primary text-white shadow-lg' 
+                        : 'bg-white/5 text-gray-700 hover:bg-white/10 backdrop-blur-sm'
                     }`}
                   >
                     {example.lang}
                   </button>
                 ))}
               </div>
-              <pre className="text-green-400 font-mono text-sm overflow-x-auto">
-                <code>{codeExamples[activeCode].code}</code>
-              </pre>
+              <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg p-4">
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+                  <code>{codeExamples[activeCode].code}</code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
