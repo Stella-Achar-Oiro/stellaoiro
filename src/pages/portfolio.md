@@ -17,12 +17,12 @@ permalink: /portfolio/
 ### API Documentation Sample
 <div class="portfolio-sample bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
   <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h3 class="text-2xl font-bold mb-2">HealthSync API Documentation</h3>
+        <h3 class="text-xl md:text-2xl font-bold mb-2">HealthSync API Documentation</h3>
         <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">API Documentation</span>
       </div>
-      <div class="text-right">
+      <div class="md:text-right">
         <div class="text-2xl font-bold">50%</div>
         <div class="text-sm opacity-90">fewer support tickets</div>
       </div>
@@ -82,7 +82,7 @@ permalink: /portfolio/
     </div>
     
     <div class="mt-6 pt-6 border-t border-gray-200">
-      <div class="flex items-center justify-between text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-sm text-gray-500">
         <span>Project Duration: 6 weeks</span>
         <span>Client: Healthcare Data Platform</span>
         <span>Team Size: Solo project</span>
@@ -94,12 +94,12 @@ permalink: /portfolio/
 ### Developer Tutorial
 <div class="portfolio-sample bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
   <div class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h3 class="text-2xl font-bold mb-2">HIPAA-Compliant File Upload Tutorial</h3>
+        <h3 class="text-xl md:text-2xl font-bold mb-2">HIPAA-Compliant File Upload Tutorial</h3>
         <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">Developer Tutorial</span>
       </div>
-      <div class="text-right">
+      <div class="md:text-right">
         <div class="text-2xl font-bold">1,200+</div>
         <div class="text-sm opacity-90">developers completed</div>
       </div>
@@ -181,7 +181,7 @@ permalink: /portfolio/
     </div>
     
     <div class="mt-6 pt-6 border-t border-gray-200">
-      <div class="flex items-center justify-between text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-sm text-gray-500">
         <span>Time to Complete: 45 minutes</span>
         <span>Skill Level: Intermediate</span>
         <span>Completion Rate: 87%</span>
@@ -193,12 +193,12 @@ permalink: /portfolio/
 ### SaaS Onboarding Guide
 <div class="portfolio-sample bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
   <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6">
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h3 class="text-2xl font-bold mb-2">MedFlow EHR - Getting Started Guide</h3>
+        <h3 class="text-xl md:text-2xl font-bold mb-2">MedFlow EHR - Getting Started Guide</h3>
         <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">User Onboarding</span>
       </div>
-      <div class="text-right">
+      <div class="md:text-right">
         <div class="text-2xl font-bold">65%</div>
         <div class="text-sm opacity-90">faster setup time</div>
       </div>
@@ -289,7 +289,7 @@ permalink: /portfolio/
     </div>
     
     <div class="mt-6 pt-6 border-t border-gray-200">
-      <div class="flex items-center justify-between text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-sm text-gray-500">
         <span>User Testing: 25 healthcare practices</span>
         <span>A/B Test Results: 90% vs 50% completion</span>
         <span>Implementation: 4 weeks</span>
@@ -301,12 +301,12 @@ permalink: /portfolio/
 ### Documentation Transformation Case Study
 <div class="portfolio-sample bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
   <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white p-6">
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h3 class="text-2xl font-bold mb-2">CloudMed API Documentation Transformation</h3>
+        <h3 class="text-xl md:text-2xl font-bold mb-2">CloudMed API Documentation Transformation</h3>
         <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">Case Study</span>
       </div>
-      <div class="text-right">
+      <div class="md:text-right">
         <div class="text-2xl font-bold">60%</div>
         <div class="text-sm opacity-90">fewer support tickets</div>
       </div>
@@ -411,7 +411,7 @@ permalink: /portfolio/
     </div>
     
     <div class="mt-6 pt-6 border-t border-gray-200">
-      <div class="flex items-center justify-between text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-sm text-gray-500">
         <span>Project Timeline: 10 weeks</span>
         <span>ROI: 650% in first year</span>
         <span>Client: Healthcare Data Platform</span>

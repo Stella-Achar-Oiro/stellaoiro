@@ -246,11 +246,23 @@ h4 { font-size: 1.5rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 
-/* Responsive Grid */
+/* Mobile-first responsive grid */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+  
+  .grid-auto {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -277,11 +289,13 @@ h4 { font-size: 1.5rem; }
     padding: 48px 0;
   }
   
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
   
   .code-mockup {
-    font-size: 12px;
+    font-size: 11px;
+    overflow-x: auto;
   }
   
   .card-hover:hover,
@@ -290,18 +304,59 @@ h4 { font-size: 1.5rem; }
   }
   
   .btn {
-    width: 100%;
-    justify-content: center;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+  
+  .portfolio-sample {
+    border-radius: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .portfolio-sample .p-6 {
+    padding: 16px;
+  }
+  
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .flex {
+    flex-direction: column;
+  }
+  
+  .flex.items-center.justify-between {
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .text-right {
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
+  .container-site {
+    padding: 0 12px;
+  }
+  
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
   
   .portfolio-sample {
-    margin: 0 -16px;
-    border-radius: 0;
+    border-radius: 8px;
+  }
+  
+  .code-mockup {
+    font-size: 10px;
+  }
+  
+  .btn {
+    padding: 16px 24px;
+    font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -442,6 +497,20 @@ a:focus {
 .p-4 { padding: 16px; }
 .p-6 { padding: 24px; }
 .p-8 { padding: 32px; }
+
+/* Mobile padding overrides */
+@media (max-width: 768px) {
+  .p-6 { padding: 16px; }
+  .p-8 { padding: 20px; }
+  
+  .portfolio-sample .bg-gradient-to-r {
+    padding: 20px 16px;
+  }
+  
+  .portfolio-sample .p-6 {
+    padding: 16px;
+  }
+}
 
 .m-4 { margin: 16px; }
 .m-6 { margin: 24px; }
