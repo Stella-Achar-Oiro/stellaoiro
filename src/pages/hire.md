@@ -1,123 +1,123 @@
 ---
 layout: layouts/page.njk
-title: Hire Me - AWS Consulting & Healthcare Cloud Solutions
-description: Hire an AWS Community Builder for cloud architecture consulting, HIPAA-compliant system design, technical documentation, and team training
+title: Hire Me - Technical Writing Services
+description: Get a free documentation audit. I create technical documentation that reduces support tickets and accelerates user success.
 permalink: /hire/
 ---
 
 <div class="text-center mb-16">
-  <h1 class="text-5xl font-bold mb-6">Let's Build Something Great Together</h1>
-  <p class="text-2xl text-text-secondary">I help healthcare companies and startups build secure, scalable cloud infrastructure</p>
+  <h1 class="text-5xl font-bold mb-6">Ready to Transform Your Technical Documentation?</h1>
+  <p class="text-2xl text-text-secondary">Let's create documentation that developers love and users actually follow</p>
 </div>
 
-## Services Offered
+## Core Services
 
 <div class="grid md:grid-cols-2 gap-8 mb-16">
 
 <div class="card">
-  <div class="w-12 h-12 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-    <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
     </svg>
   </div>
-  <h3 class="text-2xl font-bold mb-3">AWS Architecture Consulting</h3>
+  <h3 class="text-2xl font-bold mb-3">API Documentation</h3>
   <ul class="space-y-2 text-text-secondary">
-    <li>• Infrastructure design and optimization</li>
-    <li>• Cost optimization strategies</li>
-    <li>• HIPAA compliance audits</li>
-    <li>• Security best practices implementation</li>
-    <li>• Migration from on-premise to AWS</li>
+    <li>• Interactive developer-friendly docs</li>
+    <li>• Code examples in multiple languages</li>
+    <li>• Authentication and error handling</li>
+    <li>• OpenAPI/Swagger specifications</li>
+    <li>• SDK documentation</li>
   </ul>
 </div>
 
 <div class="card">
   <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
     </svg>
   </div>
-  <h3 class="text-2xl font-bold mb-3">Healthcare Cloud Solutions</h3>
+  <h3 class="text-2xl font-bold mb-3">Developer Guides & Tutorials</h3>
   <ul class="space-y-2 text-text-secondary">
-    <li>• Secure patient data systems</li>
-    <li>• EHR/EMR integration</li>
-    <li>• Compliance documentation</li>
-    <li>• Telemedicine platform architecture</li>
-    <li>• Medical data encryption strategies</li>
+    <li>• Step-by-step technical tutorials</li>
+    <li>• Getting started guides</li>
+    <li>• Integration documentation</li>
+    <li>• Best practices guides</li>
+    <li>• Troubleshooting documentation</li>
   </ul>
 </div>
 
 <div class="card">
   <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
     <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
     </svg>
   </div>
-  <h3 class="text-2xl font-bold mb-3">Technical Writing & Documentation</h3>
+  <h3 class="text-2xl font-bold mb-3">SaaS Product Documentation</h3>
   <ul class="space-y-2 text-text-secondary">
-    <li>• API documentation</li>
-    <li>• Architecture decision records</li>
-    <li>• Developer onboarding guides</li>
-    <li>• Compliance documentation</li>
-    <li>• Technical blog posts</li>
+    <li>• User onboarding flows</li>
+    <li>• Feature documentation</li>
+    <li>• Admin and user guides</li>
+    <li>• Help center articles</li>
+    <li>• In-app help content</li>
   </ul>
 </div>
 
 <div class="card">
   <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
     <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
     </svg>
   </div>
-  <h3 class="text-2xl font-bold mb-3">Training & Workshops</h3>
+  <h3 class="text-2xl font-bold mb-3">Internal Documentation & SOPs</h3>
   <ul class="space-y-2 text-text-secondary">
-    <li>• AWS fundamentals for teams</li>
-    <li>• HIPAA compliance training</li>
-    <li>• Cloud security best practices</li>
-    <li>• Kubernetes workshops</li>
-    <li>• Career transition coaching</li>
+    <li>• Process documentation</li>
+    <li>• Compliance procedures</li>
+    <li>• Team onboarding guides</li>
+    <li>• Knowledge base articles</li>
+    <li>• Training materials</li>
   </ul>
 </div>
 
 </div>
 
-## Why Work With Me?
+## Why Choose Me?
 
 <div class="grid md:grid-cols-3 gap-6 mb-16">
 
 <div class="text-center">
+  <div class="text-4xl mb-3">🔧</div>
+  <h4 class="text-xl font-bold mb-2">Developer + Writer</h4>
+  <p class="text-text-secondary">I don't just write about technology—I build it. This means I understand both the technical complexity and the human need for clarity.</p>
+</div>
+
+<div class="text-center">
   <div class="text-4xl mb-3">🏥</div>
-  <h4 class="text-xl font-bold mb-2">Unique Background</h4>
-  <p class="text-text-secondary">Clinical + Technical expertise means I understand both healthcare workflows and cloud architecture</p>
+  <h4 class="text-xl font-bold mb-2">Healthcare Expertise</h4>
+  <p class="text-text-secondary">Real-world experience with HIPAA compliance, medical workflows, and healthcare technology challenges.</p>
+</div>
+
+<div class="text-center">
+  <div class="text-4xl mb-3">📈</div>
+  <h4 class="text-xl font-bold mb-2">Proven Results</h4>
+  <p class="text-text-secondary">My documentation has reduced support tickets by 60%, accelerated onboarding by 75%, and helped companies pass compliance audits.</p>
 </div>
 
 <div class="text-center">
   <div class="text-4xl mb-3">☁️</div>
   <h4 class="text-xl font-bold mb-2">AWS Community Builder</h4>
-  <p class="text-text-secondary">Official AWS recognition for contributions to cloud architecture content and healthcare technology</p>
+  <p class="text-text-secondary">Official AWS recognition for contributions to technical writing and healthcare cloud architecture.</p>
 </div>
 
 <div class="text-center">
-  <div class="text-4xl mb-3">🔒</div>
-  <h4 class="text-xl font-bold mb-2">Healthcare Domain Knowledge</h4>
-  <p class="text-text-secondary">Real-world experience with Protected Health Information (PHI) and HIPAA compliance</p>
-</div>
-
-<div class="text-center">
-  <div class="text-4xl mb-3">🏗️</div>
-  <h4 class="text-xl font-bold mb-2">Production Systems</h4>
-  <p class="text-text-secondary">Built Kintaraa and multiple healthcare systems handling real patient data and critical workflows</p>
-</div>
-
-<div class="text-center">
-  <div class="text-4xl mb-3">💰</div>
-  <h4 class="text-xl font-bold mb-2">Cost-Conscious</h4>
-  <p class="text-text-secondary">Optimize for 3G networks and tight budgets. Your infrastructure will be lean and affordable</p>
+  <div class="text-4xl mb-3">👥</div>
+  <h4 class="text-xl font-bold mb-2">User-Centered Approach</h4>
+  <p class="text-text-secondary">I start with user research, not technical specifications. My documentation solves real problems that real people face.</p>
 </div>
 
 <div class="text-center">
   <div class="text-4xl mb-3">📚</div>
   <h4 class="text-xl font-bold mb-2">Teaching Experience</h4>
-  <p class="text-text-secondary">Lecturer at KMTC. I can explain complex technical concepts to non-technical audiences</p>
+  <p class="text-text-secondary">I can explain complex technical concepts to any audience, from junior developers to C-suite executives.</p>
 </div>
 
 </div>
@@ -128,11 +128,11 @@ permalink: /hire/
 
 <div class="card text-center">
   <h4 class="text-xl font-bold mb-4">Hourly Consulting</h4>
-  <div class="text-4xl font-bold text-brand-blue mb-4">$100/hr</div>
+  <div class="text-4xl font-bold text-brand-blue mb-4">$125/hr</div>
   <ul class="text-left space-y-2 text-text-secondary mb-6">
-    <li>• Perfect for quick questions</li>
-    <li>• Architecture reviews</li>
-    <li>• Code reviews</li>
+    <li>• Perfect for quick reviews</li>
+    <li>• Documentation audits</li>
+    <li>• Content strategy sessions</li>
     <li>• Technical guidance</li>
   </ul>
 </div>
@@ -140,21 +140,21 @@ permalink: /hire/
 <div class="card text-center border-2 border-brand-blue">
   <div class="inline-block px-3 py-1 bg-brand-blue text-white text-sm font-semibold rounded-full mb-2">Most Popular</div>
   <h4 class="text-xl font-bold mb-4">Project-Based</h4>
-  <div class="text-4xl font-bold text-brand-blue mb-4">Starting at $5,000</div>
+  <div class="text-4xl font-bold text-brand-blue mb-4">Starting at $3,000</div>
   <ul class="text-left space-y-2 text-text-secondary mb-6">
-    <li>• Complete implementations</li>
-    <li>• Infrastructure setup</li>
-    <li>• Migration projects</li>
+    <li>• Complete documentation overhauls</li>
+    <li>• API documentation projects</li>
+    <li>• User guide creation</li>
     <li>• Custom solutions</li>
   </ul>
 </div>
 
 <div class="card text-center">
   <h4 class="text-xl font-bold mb-4">Monthly Retainer</h4>
-  <div class="text-4xl font-bold text-brand-blue mb-4">$3,000/mo</div>
+  <div class="text-4xl font-bold text-brand-blue mb-4">$4,000/mo</div>
   <ul class="text-left space-y-2 text-text-secondary mb-6">
-    <li>• Ongoing support</li>
-    <li>• Monthly architecture reviews</li>
+    <li>• Ongoing documentation needs</li>
+    <li>• Monthly content creation</li>
     <li>• Priority response time</li>
     <li>• Team training included</li>
   </ul>
@@ -163,7 +163,7 @@ permalink: /hire/
 </div>
 
 <div class="bg-gray-50 rounded-lg p-6 mb-16 text-center">
-  <p class="text-lg text-text-secondary">💡 <strong>Custom packages available</strong> for healthcare startups, non-profits, and educational institutions</p>
+  <p class="text-lg text-text-secondary">💡 <strong>Free documentation audit included</strong> with all project inquiries. Custom packages available for startups and non-profits.</p>
 </div>
 
 ## Get Started
@@ -190,10 +190,11 @@ permalink: /hire/
     <label for="service" class="form-label">Service Needed *</label>
     <select id="service" name="service" required class="form-input">
       <option value="">Select a service...</option>
-      <option value="aws-consulting">AWS Architecture Consulting</option>
-      <option value="healthcare-cloud">Healthcare Cloud Solutions</option>
-      <option value="technical-writing">Technical Writing & Documentation</option>
-      <option value="training">Training & Workshops</option>
+      <option value="api-documentation">API Documentation</option>
+      <option value="developer-guides">Developer Guides & Tutorials</option>
+      <option value="saas-documentation">SaaS Product Documentation</option>
+      <option value="internal-docs">Internal Documentation & SOPs</option>
+      <option value="documentation-audit">Documentation Audit & Strategy</option>
       <option value="other">Other</option>
     </select>
   </div>
@@ -229,9 +230,9 @@ permalink: /hire/
 </form>
 
 <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-  <h4 class="text-lg font-bold mb-3">Prefer Email?</h4>
-  <p class="text-text-secondary mb-3">Reach me directly at: <a href="mailto:stellaacharoiro@gmail.com" class="text-brand-blue font-semibold">stellaacharoiro@gmail.com</a></p>
-  <p class="text-text-secondary">Or schedule a free 30-min consultation to discuss your project</p>
+  <h4 class="text-lg font-bold mb-3">Get a Free Documentation Audit</h4>
+  <p class="text-text-secondary mb-3">Email me at: <a href="mailto:stellaacharoiro@gmail.com" class="text-brand-blue font-semibold">stellaacharoiro@gmail.com</a></p>
+  <p class="text-text-secondary">I'll review your current documentation and provide specific recommendations for improvement—completely free, no strings attached.</p>
 </div>
 
 </div>

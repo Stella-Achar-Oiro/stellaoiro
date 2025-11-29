@@ -1,13 +1,13 @@
 {
   "name": "Achar Oiro",
-  "title": "Achar Oiro | AWS Community Builder & Cloud Engineer",
-  "description": "Learn AWS, Kubernetes, and healthcare cloud architecture from an AWS Community Builder with clinical background. Practical tutorials, HIPAA compliance guides, and career transition stories.",
+  "title": "Achar Oiro | Technical Writer + Developer",
+  "description": "Technical documentation that developers actually want to read. API docs, developer guides, and SaaS documentation that reduces support tickets and accelerates user success.",
   "url": "https://stellaoiro.com",
   "author": {
     "name": "Achar Oiro",
     "email": "stellaacharoiro@gmail.com",
     "title": "AWS Community Builder & Cloud Engineer",
-    "bio": "Clinical Officer turned Cloud Engineer. AWS Community Builder helping healthcare teams build secure, HIPAA-compliant cloud infrastructure.",
+    "bio": "Technical Writer + Developer with healthcare cloud expertise. I create documentation that reduces support tickets and accelerates user success.",
     "avatar": "/assets/images/stella.jpg",
     "social": {
       "linkedin": "https://linkedin.com/in/stella-oiro",
@@ -21,16 +21,16 @@
       "url": "/"
     },
     {
-      "name": "Blog",
-      "url": "/blog/"
+      "name": "Services",
+      "url": "/services/"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/portfolio/"
     },
     {
       "name": "About",
       "url": "/about/"
-    },
-    {
-      "name": "Resources",
-      "url": "/resources/"
     },
     {
       "name": "Hire Me",
