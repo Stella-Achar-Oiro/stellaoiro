@@ -48,11 +48,14 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-2">Connect</h3>
                   <div className="flex gap-4">
-                    <a href="https://linkedin.com/in/stella-oiro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    <a href="https://www.linkedin.com/in/stella-achar-oiro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                       LinkedIn
                     </a>
                     <a href="https://github.com/Stella-Achar-Oiro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                       GitHub
+                    </a>
+                    <a href="https://x.com/Stella_Oiro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      Twitter
                     </a>
                   </div>
                 </div>

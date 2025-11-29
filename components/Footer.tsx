@@ -9,9 +9,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Stella Oiro</h3>
             <p className="text-gray-600 mb-6">Technical writer specializing in API documentation, developer guides, and SaaS documentation.</p>
             <div className="flex gap-4">
-              <a href="https://linkedin.com/in/stella-oiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/stella-achar-oiro/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">LinkedIn</a>
               <a href="https://github.com/Stella-Achar-Oiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">GitHub</a>
-              <a href="https://twitter.com/stellaoiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">Twitter</a>
+              <a href="https://x.com/Stella_Oiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">Twitter</a>
             </div>
           </div>
           
