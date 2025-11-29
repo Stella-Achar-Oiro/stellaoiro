@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import PricingTable from '@/components/PricingTable'
+import ComparisonChart from '@/components/ComparisonChart'
+import FAQ from '@/components/FAQ'
 
 const services = [
   {
@@ -71,12 +74,21 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <div className="card max-w-2xl mx-auto bg-gradient-to-r from-primary/5 to-purple-50">
-              <h3 className="text-2xl font-bold mb-4">Not Sure What You Need?</h3>
-              <p className="text-gray-600 mb-6">Get a free documentation audit and personalized recommendations for your project.</p>
-              <Link href="/contact" className="btn-primary">Schedule Free Consultation</Link>
-            </div>
+        </div>
+      </section>
+
+      <PricingTable />
+      <ComparisonChart />
+      <FAQ />
+
+      <section className="section-padding bg-gradient-to-r from-primary to-purple-600">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8 opacity-90">Get a free documentation audit and personalized quote for your project.</p>
+            <Link href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-strong transition-all duration-200">
+              Schedule Free Consultation
+            </Link>
           </div>
         </div>
       </section>
