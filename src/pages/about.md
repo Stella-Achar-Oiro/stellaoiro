@@ -39,7 +39,7 @@ When I create user guides, I think like both the developer who built the feature
 
 ## What I Do Now
 
-### 📝 Technical Writing & Documentation
+### Technical Writing & Documentation
 
 I create technical documentation that developers actually want to read:
 
@@ -48,7 +48,7 @@ I create technical documentation that developers actually want to read:
 - **SaaS Onboarding**: User flows that reduce churn and support tickets
 - **Compliance Documentation**: HIPAA, SOC2, and regulatory guides
 
-### 🏗️ Development & Architecture
+### Development & Architecture
 
 At **Evarest Technologies Ltd**, I build the systems I document:
 
@@ -57,7 +57,7 @@ At **Evarest Technologies Ltd**, I build the systems I document:
 - AWS cloud architectures for healthcare startups
 - Full-stack applications with React and Node.js
 
-### ☁️ AWS Community Building
+### AWS Community Building
 
 As an **AWS Community Builder**, I:
 - Write technical content about cloud architecture and healthcare compliance
@@ -65,7 +65,7 @@ As an **AWS Community Builder**, I:
 - Mentor developers transitioning into technical writing
 - Contribute to open-source documentation projects
 
-### 📚 Teaching & Training
+### Teaching & Training
 
 I help teams improve their documentation:
 - Workshop facilitation for engineering teams
@@ -116,13 +116,13 @@ I'm a father to Daniella Hera, who keeps me grounded and reminds me why building
 
 ## Credentials & Achievements
 
-- ✓ Technical Writer + Developer (5+ years)
-- ✓ AWS Community Builder
-- ✓ Clinical Officer with healthcare compliance expertise
-- ✓ Co-founder, Evarest Technologies Ltd
-- ✓ Technical Lead, Kintaraa platform (847+ users)
-- ✓ Reduced client support tickets by 60% through better documentation
-- ✓ Created tutorials completed by 1,200+ developers
+- Technical Writer + Developer (5+ years)
+- AWS Community Builder
+- Clinical Officer with healthcare compliance expertise
+- Co-founder, Evarest Technologies Ltd
+- Technical Lead, Kintaraa platform (847+ users)
+- Reduced client support tickets by 60% through better documentation
+- Created tutorials completed by 1,200+ developers
 
 ## Let's Build Something
 
@@ -139,10 +139,10 @@ Whether you're a healthcare startup needing cloud architecture, a tech team want
 
 ## Connect With Me
 
-- 📧 **Email**: [stellaacharoiro@gmail.com](mailto:stellaacharoiro@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/stella-oiro](https://linkedin.com/in/stella-oiro)
-- 🐙 **GitHub**: [github.com/stella-oiro](https://github.com/stella-oiro)
-- 📅 **Schedule a Call**: Book a free 30-min consultation
+- **Email**: [stellaacharoiro@gmail.com](mailto:stellaacharoiro@gmail.com)
+- **LinkedIn**: [linkedin.com/in/stella-oiro](https://linkedin.com/in/stella-oiro)
+- **GitHub**: [github.com/stella-oiro](https://github.com/stella-oiro)
+- **Schedule a Call**: Book a free 30-min consultation
 
 ---
 
