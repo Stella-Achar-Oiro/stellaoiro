@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Stella Oiro | Technical Writer for API & Developer Documentation',
   description: 'Technical writer specializing in API documentation, developer guides, and SaaS documentation. Clear, accurate docs that developers actually use.',
+  metadataBase: new URL('https://stellaoiro.co.ke'),
 }
 
 export default function RootLayout({
