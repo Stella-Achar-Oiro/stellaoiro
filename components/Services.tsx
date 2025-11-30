@@ -44,7 +44,7 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service) => (
             <div key={service.title} className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/20 hover:border-primary/30">
                 <div className="text-primary mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>

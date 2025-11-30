@@ -74,7 +74,7 @@ const projects: Project[] = [
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Portfolio</h1>
@@ -88,7 +88,7 @@ export default function PortfolioPage() {
           <div className="space-y-20">
             {projects.map((project) => (
               <div key={project.title} className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
@@ -168,7 +168,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-primary to-purple-600">
+      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Want Results Like These?</h2>

@@ -42,7 +42,7 @@ export default function ProcessSteps() {
           {steps.map((step, idx) => (
             <div key={step.number} className="relative">
               <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
-                <div className="absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                <div className="absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br from-primary to-#E8956F rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                   {idx + 1}
                 </div>
                 <div className="mt-6">

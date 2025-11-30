@@ -45,7 +45,7 @@ const certifications = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">About Me</h1>
@@ -57,7 +57,7 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-custom max-w-4xl">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
             <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-soft border border-white/30">
               <h2 className="text-3xl font-bold mb-6">My Story</h2>
               
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                   
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-#E8956F rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
                     {idx + 1}
                   </div>
                   
@@ -126,7 +126,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {certifications.map((cert) => (
               <div key={cert.name} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30 text-center">
                   <div className="text-primary mb-4 flex justify-center">{cert.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{cert.name}</h3>
@@ -174,7 +174,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-primary to-purple-600">
+      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Work Together</h2>

@@ -67,7 +67,7 @@ export default function PricingTable() {
           {packages.map((pkg) => (
             <div key={pkg.name} className="relative">
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-purple-600 text-white text-sm font-medium rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-#E8956F text-white text-sm font-medium rounded-full">
                   Most Popular
                 </div>
               )}

@@ -20,7 +20,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen">
       <ReadingProgress />
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom max-w-4xl">
           <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} />
           <div className="flex items-center gap-3 mb-4">
@@ -52,7 +52,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <h2>Coming Soon</h2>
             <p>This blog post is currently being written. Check back soon for the full article!</p>
             
-            <div className="bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl p-8 my-12 border border-primary/20">
+            <div className="bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl p-8 my-12 border border-primary/20">
               <h3 className="text-2xl font-bold mb-4">Want to Learn More?</h3>
               <p className="mb-6">Get technical writing tips and documentation best practices delivered to your inbox.</p>
               <Link href="/contact" className="btn-primary">

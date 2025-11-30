@@ -33,7 +33,7 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div key={testimonial.author} className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-2xl"></div>
               <div className="relative bg-white/70 backdrop-blur-md rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
               <div className="mb-6">
                 <svg className="w-10 h-10 text-primary/20" fill="currentColor" viewBox="0 0 24 24">

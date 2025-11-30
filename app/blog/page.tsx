@@ -7,7 +7,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog</h1>
@@ -33,7 +33,7 @@ export default function BlogPage() {
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <div className="relative group h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-xl shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30 overflow-hidden h-full flex flex-col">
                     {post.image && (
                       <div className="h-48 overflow-hidden">
@@ -67,7 +67,7 @@ export default function BlogPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-custom max-w-4xl">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
             <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-soft border border-white/30 text-center">
               <h2 className="text-3xl font-bold mb-4">Get New Posts in Your Inbox</h2>
               <p className="text-gray-600 mb-6">Subscribe to get technical writing tips and documentation best practices delivered weekly.</p>

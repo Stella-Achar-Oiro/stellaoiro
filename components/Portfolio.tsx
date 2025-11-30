@@ -35,7 +35,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>

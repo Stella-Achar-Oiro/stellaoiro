@@ -21,7 +21,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -29,7 +29,7 @@ export default function Hero() {
               Technical Writer & Documentation Specialist
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-#E8956F bg-clip-text text-transparent">
               Documentation That Developers Actually Use
             </h1>
             
@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-orange-500/20 rounded-2xl blur-3xl"></div>
             <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl shadow-strong p-6 border border-white/20">
               <div className="flex gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-red-500 shadow-lg"></div>

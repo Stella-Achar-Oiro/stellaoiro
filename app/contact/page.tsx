@@ -48,7 +48,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Get Started</h1>
@@ -89,10 +89,10 @@ export default function ContactPage() {
             </div>
 
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-pink-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft border border-white/30 text-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-#E8956F" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -199,7 +199,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold mb-6">Book a Call</h2>
               
               <div className="relative mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
                 <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft border border-white/30">
                   <h3 className="font-bold mb-4">Schedule Free 30-Min Consultation</h3>
                   <p className="text-gray-600 mb-6">
@@ -244,7 +244,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl p-6 border border-primary/20">
+                <div className="bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl p-6 border border-primary/20">
                   <h3 className="font-bold mb-2">Response Time Guarantee</h3>
                   <p className="text-gray-700 text-sm">
                     I respond to all inquiries within 24 hours. Most messages get a response within 4-6 hours during business hours (EAT timezone).

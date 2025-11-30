@@ -33,7 +33,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Technical Writing Services</h1>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
       <ComparisonChart />
       <FAQ />
 
-      <section className="section-padding bg-gradient-to-r from-primary to-purple-600">
+      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
