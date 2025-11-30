@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import AnimatedCounter from './AnimatedCounter'
 
 const codeExamples = [
   { lang: 'Python', code: `import requests\n\nresponse = requests.get(\n  'https://api.example.com/v1/users',\n  headers={'Authorization': 'Bearer TOKEN'}\n)\nprint(response.json())` },
@@ -80,19 +81,27 @@ export default function Hero() {
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">50+</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter end={50} suffix="+" />
+            </div>
             <div className="text-gray-600">Projects Delivered</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">98%</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter end={98} suffix="%" />
+            </div>
             <div className="text-gray-600">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">5+</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter end={5} suffix="+" />
+            </div>
             <div className="text-gray-600">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">24h</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter end={24} suffix="h" />
+            </div>
             <div className="text-gray-600">Response Time</div>
           </div>
         </div>

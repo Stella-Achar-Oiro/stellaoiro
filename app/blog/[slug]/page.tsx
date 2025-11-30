@@ -1,5 +1,7 @@
 import { getBlogPost, getBlogPosts } from '@/lib/blog'
 import Link from 'next/link'
+import ReadingProgress from '@/components/ReadingProgress'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()
@@ -17,11 +19,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="min-h-screen">
+      <ReadingProgress />
       <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container-custom max-w-4xl">
-          <Link href="/blog" className="text-primary hover:underline mb-6 inline-block">
-            ← Back to Blog
-          </Link>
+          <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} />
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">{post.category}</span>
             <span className="text-gray-600">{post.readTime}</span>

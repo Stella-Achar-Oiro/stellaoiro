@@ -5,9 +5,10 @@ import BeforeAfter from '@/components/BeforeAfter'
 import Stats from '@/components/Stats'
 import Portfolio from '@/components/Portfolio'
 import ProcessSteps from '@/components/ProcessSteps'
-import Testimonials from '@/components/Testimonials'
+import TestimonialCarousel from '@/components/TestimonialCarousel'
 import CTA from '@/components/CTA'
 import FloatingCTA from '@/components/FloatingCTA'
+import SocialProof from '@/components/SocialProof'
 
 export default function Home() {
   return (
@@ -19,9 +20,10 @@ export default function Home() {
       <Stats />
       <Portfolio />
       <ProcessSteps />
-      <Testimonials />
+      <TestimonialCarousel />
       <CTA />
       <FloatingCTA />
+      <SocialProof />
     </>
   )
 }
