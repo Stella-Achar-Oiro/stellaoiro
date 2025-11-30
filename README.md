@@ -24,16 +24,16 @@ This is a professional tech blog focused on:
 
 ## Features
 
-✅ **Responsive Design** - Mobile-first, works on all devices
-✅ **Fast Performance** - Optimized for 3G networks (East Africa focus)
-✅ **SEO Optimized** - Meta tags, Open Graph, Twitter Cards
-✅ **Code Syntax Highlighting** - Beautiful code blocks for tutorials
-✅ **Newsletter Integration** - Email capture forms throughout
-✅ **Blog with Categories** - AWS, Healthcare, Kubernetes, Career
-✅ **Prominent "Hire Me" CTA** - Consulting page with contact form
-✅ **About Page** - Full story and credentials
-✅ **Resources Page** - Free downloads and recommendations
-✅ **Legal Pages** - Privacy Policy and Terms of Service
+ **Responsive Design** - Mobile-first, works on all devices
+ **Fast Performance** - Optimized for 3G networks (East Africa focus)
+ **SEO Optimized** - Meta tags, Open Graph, Twitter Cards
+ **Code Syntax Highlighting** - Beautiful code blocks for tutorials
+ **Newsletter Integration** - Email capture forms throughout
+ **Blog with Categories** - AWS, Healthcare, Kubernetes, Career
+ **Prominent "Hire Me" CTA** - Consulting page with contact form
+ **About Page** - Full story and credentials
+ **Resources Page** - Free downloads and recommendations
+ **Legal Pages** - Privacy Policy and Terms of Service
 
 ## Project Structure
 
