@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-primary-light bg-clip-text text-transparent">
-              I Build Healthcare Systems, Then Document Them
+              I Help Healthcare Companies Ship Better Documentation—Faster
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
