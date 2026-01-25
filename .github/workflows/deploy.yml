@@ -38,5 +38,5 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./out/
-          server-dir: /home/stellaoi/public_html/
+          server-dir: ./public_html/
           timeout: 60000
