@@ -21,20 +21,23 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-block mb-6 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              Technical Writer & Documentation Specialist
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              AWS Community Builder | Healthcare Cloud Developer
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-#E8956F bg-clip-text text-transparent">
-              Documentation That Developers Actually Use
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-primary to-primary-light bg-clip-text text-transparent">
+              I Build Healthcare Systems, Then Document Them
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">
-              I create clear, accurate API docs, developer guides, and technical content that turns confused users into confident builders.
+              Software developer specializing in healthcare technology documentation. I write from a developer's perspective—because I am one. Python, Go, TypeScript. 25,000+ words published.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -48,8 +51,8 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-orange-500/20 rounded-2xl blur-3xl"></div>
-            <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl shadow-strong p-6 border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur-2xl"></div>
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl shadow-md p-6 border border-white/20">
               <div className="flex gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-red-500 shadow-lg"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500 shadow-lg"></div>
@@ -63,7 +66,7 @@ export default function Hero() {
                     className={`px-3 py-1 text-sm rounded-lg transition-all ${
                       activeCode === idx 
                         ? 'bg-primary text-white shadow-lg' 
-                        : 'bg-white/5 text-gray-700 hover:bg-white/10 backdrop-blur-sm'
+                        : 'bg-white/5 text-gray-700 hover:bg-white/5 backdrop-blur-sm'
                     }`}
                   >
                     {example.lang}
@@ -82,25 +85,25 @@ export default function Hero() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              <AnimatedCounter end={50} suffix="+" />
+              25K+
             </div>
-            <div className="text-gray-600">Projects Delivered</div>
+            <div className="text-gray-600">Words Published</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              <AnimatedCounter end={98} suffix="%" />
-            </div>
-            <div className="text-gray-600">Client Satisfaction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">
-              <AnimatedCounter end={5} suffix="+" />
+              13+
             </div>
             <div className="text-gray-600">Years Experience</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              <AnimatedCounter end={24} suffix="h" />
+              100%
+            </div>
+            <div className="text-gray-600">Client Satisfaction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">
+              24h
             </div>
             <div className="text-gray-600">Response Time</div>
           </div>

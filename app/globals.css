@@ -14,19 +14,19 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-soft hover:shadow-medium hover:scale-105 active:scale-95;
+    @apply bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary border-2 border-primary font-medium px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+    @apply bg-white hover:bg-gray-50 text-primary border border-gray-200 font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:border-primary;
   }
   
   .card {
-    @apply bg-white rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+    @apply bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
   }
   
   .section-padding {
-    @apply py-20 px-6;
+    @apply py-24 px-6;
   }
   
   .container-custom {

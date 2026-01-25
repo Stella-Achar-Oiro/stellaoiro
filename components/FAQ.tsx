@@ -52,7 +52,7 @@ export default function FAQ() {
         
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl shadow-soft border border-white/30 overflow-hidden">
+            <div key={index} className="bg-white/95 backdrop-blur-sm rounded-xl shadow-sm border border-white/30 overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50/50 transition-colors"

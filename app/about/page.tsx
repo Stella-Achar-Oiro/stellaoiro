@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 const timeline = [
-  { year: '2018', title: 'Clinical Officer', description: 'Started career in healthcare in Kenya, treating patients and managing medical records.' },
-  { year: '2020', title: 'Discovered Tech', description: 'Taught myself Python and cloud computing during COVID-19 lockdown.' },
-  { year: '2021', title: 'Cloud Engineer', description: 'Transitioned to cloud engineering, working on healthcare infrastructure projects.' },
-  { year: '2022', title: 'AWS Community Builder', description: 'Recognized by AWS for contributions to cloud community and technical content.' },
-  { year: '2023', title: 'Technical Writer', description: 'Combined healthcare, cloud, and writing skills into full-time technical writing.' },
-  { year: '2024', title: 'Documentation Specialist', description: 'Helping 50+ startups create developer-friendly documentation.' },
+  { year: '2011', title: 'Healthcare Sector Entry', description: 'Began career in Kenya\'s healthcare sector, gaining deep understanding of medical workflows and clinical systems.' },
+  { year: '2018', title: 'Software Development', description: 'Transitioned to software development, building healthcare technology solutions with Python and cloud platforms.' },
+  { year: '2021', title: 'Cloud Engineering', description: 'Specialized in AWS infrastructure for healthcare platforms. Earned AWS Solutions Architect certification.' },
+  { year: '2022', title: 'AWS Community Builder', description: 'Recognized by AWS for contributions to cloud community and technical content. Co-founded Evarest Technologies Ltd.' },
+  { year: '2023', title: 'Technical Writing Focus', description: 'Combined development and writing skills. Published 25,000+ words on healthcare APIs, cloud architecture, and Kubernetes.' },
+  { year: '2024', title: 'Healthcare Documentation Specialist', description: 'Full-time technical writing for healthcare technology companies. Specializing in API docs and cloud infrastructure documentation.' },
 ]
 
 const certifications = [
@@ -45,7 +45,7 @@ const certifications = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">About Me</h1>
@@ -57,25 +57,29 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-custom max-w-4xl">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-soft border border-white/30">
-              <h2 className="text-3xl font-bold mb-6">My Story</h2>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-lg"></div>
+            <div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-sm border border-white/30">
+              <h2 className="text-3xl font-bold mb-6">I Build Healthcare Technology—Then I Document It</h2>
               
               <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
                 <p>
-                  I started my career as a clinical officer in Kenya, treating patients and managing medical records. During the COVID-19 lockdown in 2020, I taught myself Python and cloud computing, fascinated by how technology could improve healthcare.
+                  Most technical writers interview developers to understand the systems they document. I take a different approach: I build the systems first, then write about them.
                 </p>
                 
                 <p>
-                  By 2021, I had transitioned into cloud engineering, working on healthcare infrastructure projects. I quickly realized that the biggest barrier to adoption wasn't the technology—it was the documentation. Complex systems with poor docs meant frustrated developers and slow implementations.
+                  With 13+ years spanning Kenya's healthcare sector and software development, I've built medical transcription AI platforms, cloud-native healthcare infrastructure on AWS, and blockchain systems for social impact. Each project taught me what developers actually need in documentation—because I've been that frustrated developer reading incomplete API docs at 2 AM.
                 </p>
                 
                 <p>
-                  That's when I discovered my passion for technical writing. I combined my healthcare background, cloud engineering skills, and love for clear communication to help startups create documentation that developers actually use.
+                  As an AWS Community Builder and co-founder of Evarest Technologies Ltd, I specialize in healthcare technology documentation. I understand HIPAA compliance requirements, FHIR standards, and the unique challenges of documenting systems that handle protected health information.
                 </p>
                 
                 <p>
-                  Today, I specialize in API documentation, developer guides, and SaaS documentation. I've helped 50+ companies reduce support tickets by 40-60% and speed up developer onboarding by creating clear, accurate, and comprehensive documentation.
+                  I write in Python, Go, TypeScript, and Rust. I deploy on AWS with Docker and Kubernetes. And I document everything with the same attention to detail I bring to code. The result? Documentation that reduces developer onboarding time, cuts support tickets, and actually gets used.
+                </p>
+                
+                <p>
+                  Based in Nairobi, Kenya, I work with healthcare technology companies globally—from early-stage startups to established platforms. If you need someone who can read your codebase, understand your architecture, and explain it clearly to other developers, let's talk.
                 </p>
               </div>
             </div>
@@ -87,7 +91,7 @@ export default function AboutPage() {
         <div className="container-custom max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">My Journey</h2>
-            <p className="text-xl text-gray-600">From clinical officer to technical writer</p>
+            <p className="text-xl text-gray-600">From healthcare sector to software development to technical writing</p>
           </div>
           
           <div className="relative">
@@ -97,14 +101,14 @@ export default function AboutPage() {
               {timeline.map((item, idx) => (
                 <div key={item.year} className={`relative flex items-center ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className={`w-full md:w-5/12 ${idx % 2 === 0 ? 'md:text-right md:pr-12' : 'md:text-left md:pl-12'}`}>
-                    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft border border-white/30">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/30">
                       <div className="text-primary font-bold text-lg mb-2">{item.year}</div>
                       <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                       <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>
                   
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-#E8956F rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
                     {idx + 1}
                   </div>
                   
@@ -126,8 +130,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {certifications.map((cert) => (
               <div key={cert.name} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30 text-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-sm hover:shadow-sm transition-all duration-300 border border-white/30 text-center">
                   <div className="text-primary mb-4 flex justify-center">{cert.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{cert.name}</h3>
                   <p className="text-gray-600 mb-2">{cert.issuer}</p>
@@ -144,7 +148,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft border border-white/30">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/30">
               <h3 className="font-bold mb-4 text-primary">Documentation Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {['Markdown', 'Git/GitHub', 'OpenAPI', 'Swagger', 'Docusaurus', 'GitBook'].map((skill) => (
@@ -153,16 +157,16 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft border border-white/30">
-              <h3 className="font-bold mb-4 text-primary">Programming</h3>
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/30">
+              <h3 className="font-bold mb-4 text-primary">Programming Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'JavaScript', 'TypeScript', 'REST APIs', 'GraphQL', 'SQL'].map((skill) => (
+                {['Python', 'Go', 'JavaScript', 'TypeScript', 'Rust', 'SQL'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-lg">{skill}</span>
                 ))}
               </div>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-soft border border-white/30">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/30">
               <h3 className="font-bold mb-4 text-primary">Cloud & DevOps</h3>
               <div className="flex flex-wrap gap-2">
                 {['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Linux'].map((skill) => (
@@ -174,12 +178,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
+      <section className="section-padding bg-gradient-to-r from-primary to-primary-light">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Work Together</h2>
             <p className="text-xl mb-8 opacity-90">Ready to create documentation that developers actually use? Let's talk about your project.</p>
-            <Link href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-strong transition-all duration-200">
+            <Link href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-md transition-all duration-200">
               Get in Touch
             </Link>
           </div>

@@ -8,9 +8,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#C15F3C',
-          dark: '#8B4329',
-          light: '#D4825F',
+          DEFAULT: '#7C3AED',
+          dark: '#5B21B6',
+          light: '#8B5CF6',
         },
         dark: {
           DEFAULT: '#0F1419',
@@ -43,9 +43,16 @@ module.exports = {
         'body': ['1rem', { lineHeight: '1.75' }],
       },
       boxShadow: {
-        'soft': '0 2px 8px rgba(0, 0, 0, 0.08)',
-        'medium': '0 4px 16px rgba(0, 0, 0, 0.12)',
-        'strong': '0 8px 32px rgba(0, 0, 0, 0.16)',
+        'soft': '0 1px 3px rgba(0, 0, 0, 0.05)',
+        'medium': '0 4px 6px rgba(0, 0, 0, 0.07)',
+        'strong': '0 10px 15px rgba(0, 0, 0, 0.1)',
+      },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
+      },
+      backdropBlur: {
+        'xs': '2px',
       },
     },
   },

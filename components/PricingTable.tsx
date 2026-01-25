@@ -67,11 +67,11 @@ export default function PricingTable() {
           {packages.map((pkg) => (
             <div key={pkg.name} className="relative">
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-#E8956F text-white text-sm font-medium rounded-full">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-primary-light text-white text-sm font-medium rounded-full">
                   Most Popular
                 </div>
               )}
-              <div className={`relative h-full bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border ${pkg.popular ? 'border-primary' : 'border-white/30'}`}>
+              <div className={`relative h-full bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-sm hover:shadow-sm transition-all duration-300 border ${pkg.popular ? 'border-primary' : 'border-white/30'}`}>
                 <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-primary">{pkg.price}</span>
@@ -90,7 +90,7 @@ export default function PricingTable() {
                   ))}
                 </ul>
                 
-                <Link href="/contact" className={`block text-center font-medium px-6 py-3 rounded-lg transition-all duration-200 ${pkg.popular ? 'bg-primary hover:bg-primary-dark text-white shadow-soft hover:shadow-medium' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}>
+                <Link href="/contact" className={`block text-center font-medium px-6 py-3 rounded-lg transition-all duration-200 ${pkg.popular ? 'bg-primary hover:bg-primary-dark text-white shadow-sm hover:shadow-sm' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}>
                   {pkg.cta}
                 </Link>
               </div>

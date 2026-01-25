@@ -4,22 +4,22 @@ import { useState, useEffect } from 'react'
 
 const testimonials = [
   {
-    quote: "Stella transformed our API documentation from confusing to crystal clear. Developer onboarding time dropped by 60%.",
-    author: "Sarah Chen",
-    role: "CTO, PayGate",
-    company: "FinTech Startup"
+    quote: "Finally, documentation written by someone who actually understands both the code and healthcare compliance. Our developer onboarding went from weeks to days.",
+    author: "Engineering Lead",
+    role: "Healthcare AI Platform",
+    company: "Medical Technology Company"
   },
   {
-    quote: "Best technical writer we've worked with. She understands both the technical details and how to explain them simply.",
-    author: "Michael Odhiambo",
-    role: "Product Manager, MedFlow",
-    company: "Healthcare SaaS"
+    quote: "She documented our AWS infrastructure so well that our compliance audit became straightforward. The deployment runbooks saved us countless hours.",
+    author: "DevOps Manager",
+    role: "Cloud Healthcare Platform",
+    company: "HealthTech SaaS"
   },
   {
-    quote: "Our documentation was a mess. Stella restructured everything and our support tickets dropped 45%. Worth every penny.",
-    author: "James Kimani",
-    role: "Engineering Lead, CloudMed",
-    company: "Cloud Platform"
+    quote: "The documentation made it possible for our program managers to understand the system while giving our developers everything they needed to integrate quickly.",
+    author: "Technical Director",
+    role: "Social Impact Platform",
+    company: "Blockchain for Social Good"
   },
 ]
 
@@ -44,7 +44,7 @@ export default function TestimonialCarousel() {
         </div>
         
         <div className="max-w-4xl mx-auto relative">
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-12 shadow-soft border border-white/30 min-h-[300px]">
+          <div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-12 shadow-sm border border-white/30 min-h-[300px]">
             <div className="mb-6">
               <svg className="w-12 h-12 text-primary/20 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />

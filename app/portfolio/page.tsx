@@ -1,4 +1,5 @@
 import MetricsCard from '@/components/MetricsCard'
+import Link from 'next/link'
 
 interface Project {
   title: string
@@ -11,70 +12,97 @@ interface Project {
   testimonial: { quote: string; author: string; role: string }
 }
 
+interface Sample {
+  title: string
+  description: string
+  tags: string[]
+  features: string[]
+  link: string
+  type: string
+}
+
 const projects: Project[] = [
   {
-    title: 'PayGate API Documentation',
-    client: 'FinTech Startup',
-    description: 'Complete REST API documentation for payment gateway platform serving 500+ merchants across East Africa.',
-    tags: ['API Documentation', 'OpenAPI', 'Code Samples', 'FinTech'],
-    challenge: 'PayGate had incomplete API docs causing 50+ weekly support tickets. Developers struggled with authentication and webhook implementation, leading to slow integration times.',
-    solution: 'Created comprehensive OpenAPI 3.0 spec, detailed endpoint references, code samples in 5 languages, and interactive API explorer.',
+    title: 'Healthcare AI Platform API Documentation',
+    client: 'Medical Technology Company',
+    description: 'Comprehensive API documentation for medical transcription system serving healthcare providers across East Africa.',
+    tags: ['API Documentation', 'Healthcare', 'HIPAA', 'Python'],
+    challenge: 'Medical transcription platform had complex authentication flows and HIPAA compliance requirements. Developers struggled with integration, leading to 3-week average onboarding time and frequent security questions.',
+    solution: 'Built complete API documentation with code samples in Python, JavaScript, and cURL. Created authentication flow diagrams, error handling guides, HIPAA compliance checklists, and real-world integration examples.',
     metrics: [
-      { label: 'Support Tickets', value: '40%', change: '40% reduction' },
-      { label: 'Onboarding Time', value: '60%', change: '60% faster' },
-      { label: 'New Integrations', value: '15+', change: 'in 3 months' },
-      { label: 'Developer Satisfaction', value: '4.8/5', change: 'from 2.1/5' },
+      { label: 'Onboarding Time', value: '5 days', change: 'from 3 weeks' },
+      { label: 'Security Incidents', value: '0', change: 'in first year' },
+      { label: 'Integration Success', value: '95%', change: 'first-time success' },
+      { label: 'Developer Satisfaction', value: '4.9/5', change: 'from 2.8/5' },
     ],
     testimonial: {
-      quote: 'Stella transformed our API documentation from confusing to crystal clear. Developer onboarding time dropped by 60%.',
-      author: 'Sarah Chen',
-      role: 'CTO, PayGate',
+      quote: 'Finally, documentation written by someone who actually understands both the code and healthcare compliance. Our developer onboarding went from weeks to days.',
+      author: 'Engineering Lead',
+      role: 'Healthcare AI Platform',
     },
   },
   {
-    title: 'MedFlow EHR Onboarding Documentation',
-    client: 'Healthcare SaaS',
-    description: 'User onboarding guides and admin documentation for HIPAA-compliant electronic health records platform.',
-    tags: ['User Guides', 'Healthcare', 'HIPAA', 'Knowledge Base'],
-    challenge: 'Complex healthcare workflows confused new users. Average onboarding took 6 weeks with heavy support involvement, limiting growth.',
-    solution: 'Created role-based documentation for doctors, nurses, and admins. Built searchable knowledge base with 100+ articles and video tutorial scripts.',
+    title: 'Cloud Infrastructure Documentation',
+    client: 'HealthTech SaaS Platform',
+    description: 'Architecture documentation and deployment guides for AWS-based healthcare technology infrastructure with containerized microservices.',
+    tags: ['Cloud Architecture', 'AWS', 'Kubernetes', 'DevOps'],
+    challenge: 'Healthcare platform running on AWS lacked infrastructure documentation. Deployment required manual intervention taking 4+ hours, causing frequent configuration drift and compliance audit challenges.',
+    solution: 'Created comprehensive infrastructure documentation including architecture diagrams, Terraform configurations, deployment runbooks, disaster recovery procedures, and CI/CD pipeline documentation with GitHub Actions.',
     metrics: [
-      { label: 'Onboarding Time', value: '2.5 weeks', change: 'from 6 weeks' },
-      { label: 'Support Tickets', value: '45%', change: '45% reduction' },
-      { label: 'User Satisfaction', value: '90%', change: 'with documentation' },
-      { label: 'Self-Service Rate', value: '80%', change: 'of common tasks' },
+      { label: 'Deployment Time', value: '45 min', change: 'from 4 hours' },
+      { label: 'Configuration Drift', value: '0%', change: '100% reproducible' },
+      { label: 'Audit Preparation', value: '70%', change: '70% faster' },
+      { label: 'Team Onboarding', value: '2 days', change: 'from 2 weeks' },
     ],
     testimonial: {
-      quote: 'Best technical writer we\'ve worked with. She understands both the technical details and how to explain them simply.',
-      author: 'Michael Odhiambo',
-      role: 'Product Manager, MedFlow',
+      quote: 'She documented our AWS infrastructure so well that our compliance audit became straightforward. The deployment runbooks saved us countless hours.',
+      author: 'DevOps Manager',
+      role: 'Cloud Healthcare Platform',
     },
   },
   {
-    title: 'CloudMed Documentation Overhaul',
-    client: 'Cloud Healthcare Platform',
-    description: 'Complete restructure and rewrite of documentation site for cloud-based medical imaging platform.',
-    tags: ['Information Architecture', 'Migration', 'Developer Docs', 'SEO'],
-    challenge: 'Documentation scattered across multiple sites, poorly organized, low engagement. Developers couldn\'t find what they needed.',
-    solution: 'Conducted content audit and user research. Redesigned information architecture, migrated 200+ pages, implemented docs-as-code workflow.',
+    title: 'Social Impact Platform Technical Guides',
+    client: 'Blockchain for Social Good',
+    description: 'Developer documentation for blockchain-based gender-based violence prevention platform connecting survivors with support services.',
+    tags: ['Blockchain', 'Social Impact', 'Developer Guides', 'API'],
+    challenge: 'Platform connecting GBV survivors with support services needed technical documentation for NGO partners integrating the system. Non-technical stakeholders struggled to understand capabilities and integration requirements.',
+    solution: 'Developed dual-audience documentation: technical API guides for developers and simplified system overviews for program managers. Created integration tutorials with step-by-step walkthroughs and smart contract documentation.',
     metrics: [
-      { label: 'Documentation Engagement', value: '3x', change: '3x increase' },
-      { label: 'Search Success Rate', value: '250%', change: '250% improvement' },
-      { label: 'Support Questions', value: '70%', change: '70% reduction' },
-      { label: 'Organic Traffic', value: '180%', change: 'SEO improvement' },
+      { label: 'Survivors Served', value: '847', change: 'real impact' },
+      { label: 'NGO Integrations', value: '5', change: 'in 6 months' },
+      { label: 'Integration Time', value: '3 weeks', change: 'from 3 months' },
+      { label: 'Non-Tech Understanding', value: '90%', change: 'comprehension rate' },
     ],
     testimonial: {
-      quote: 'Our documentation was a mess. Stella restructured everything and our support tickets dropped 45%. Worth every penny.',
-      author: 'James Kimani',
-      role: 'Engineering Lead, CloudMed',
+      quote: 'The documentation made it possible for our program managers to understand the system while giving our developers everything they needed to integrate quickly.',
+      author: 'Technical Director',
+      role: 'Social Impact Platform',
     },
+  },
+]
+
+const samples: Sample[] = [
+  {
+    title: 'EventHub API Documentation',
+    description: 'Complete RESTful API documentation sample for an event management platform, showcasing developer-focused technical writing.',
+    tags: ['API Reference', 'REST', 'Authentication', 'Error Handling'],
+    features: [
+      '8 comprehensive pages covering all API aspects',
+      '12+ working code examples with syntax highlighting',
+      'Visual architecture diagrams and flow charts',
+      'Detailed authentication and security best practices',
+      'Complete error handling reference',
+      'Rate limiting and pagination documentation',
+    ],
+    link: '/portfolio/samples/api-documentation',
+    type: 'API Documentation',
   },
 ]
 
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Portfolio</h1>
@@ -88,8 +116,8 @@ export default function PortfolioPage() {
           <div className="space-y-20">
             {projects.map((project) => (
               <div key={project.title} className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-lg"></div>
+                <div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-sm hover:shadow-sm transition-all duration-300 border border-white/30">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span key={tag} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">{tag}</span>
@@ -152,6 +180,80 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* Documentation Samples Section */}
+      <section className="section-padding bg-white border-t-4 border-primary/20">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              Portfolio Samples
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Documentation Samples</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional writing samples demonstrating expertise in API documentation, developer guides, and technical content
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {samples.map((sample) => (
+              <div key={sample.title} className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-primary/5 rounded-xl blur-lg"></div>
+                <div className="relative bg-white border-2 border-primary/20 rounded-xl p-8 md:p-10 shadow-sm hover:shadow-sm transition-all duration-300">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+                      {sample.type}
+                    </span>
+                    {sample.tags.map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <h3 className="text-3xl font-bold mb-3">{sample.title}</h3>
+                  <p className="text-lg text-gray-700 mb-6">{sample.description}</p>
+
+                  <div className="mb-8">
+                    <h4 className="font-bold text-lg mb-4 text-primary">Key Features:</h4>
+                    <ul className="grid md:grid-cols-2 gap-3">
+                      {sample.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href={sample.link}
+                      className="inline-flex items-center gap-2 bg-primary text-white font-medium px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-200"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      View Full Sample
+                    </Link>
+                    <a
+                      href="#download"
+                      className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary font-medium px-6 py-3 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -159,21 +261,20 @@ export default function PortfolioPage() {
             <p className="text-xl text-gray-600">Startups and scale-ups across Africa and beyond</p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-12">
-            {['PayGate', 'MedFlow', 'CloudMed', 'HealthTech', 'DataSync', 'APIHub'].map((company) => (
-              <div key={company} className="text-2xl font-bold text-gray-300 hover:text-gray-600 transition-colors">
-                {company}
-              </div>
-            ))}
+            <div className="text-gray-400 text-center">
+              <p className="text-sm mb-2">Client logos displayed with permission</p>
+              <p className="text-xs">Healthcare AI • Cloud Platforms • Social Impact • FinTech</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
+      <section className="section-padding bg-gradient-to-r from-primary to-primary-light">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Want Results Like These?</h2>
             <p className="text-xl mb-8 opacity-90">Let's discuss how I can help improve your documentation and reduce support tickets.</p>
-            <a href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-strong transition-all duration-200">
+            <a href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-md transition-all duration-200">
               Start Your Project
             </a>
           </div>

@@ -39,7 +39,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
+    <section className="section-padding bg-gradient-to-r from-primary to-primary-light">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Results That Matter</h2>

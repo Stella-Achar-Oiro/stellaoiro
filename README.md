@@ -1,53 +1,58 @@
-# Achar Oiro Tech Blog
+# Stella Oiro - Technical Writing Portfolio
 
-Professional tech blog for AWS Community Builder Achar Oiro. Built with 11ty, Tailwind CSS, and deployed on AWS/Netlify.
+Professional technical writing portfolio and blog. Built with Next.js 14, TypeScript, Tailwind CSS, and deployed via FTP to HostPinnacle.
 
 🌐 **Live Site**: [stellaoiro.com](https://stellaoiro.com)
 
 ## About
 
-This is a professional tech blog focused on:
-- AWS & Cloud Engineering
-- Healthcare Technology & HIPAA Compliance
-- Kubernetes & Container Orchestration
-- Career Transition Stories (Healthcare → Tech)
+This is a professional portfolio showcasing:
+- Technical Writing Services (API docs, Developer guides, User documentation)
+- Portfolio of Real Projects with Measurable Results
+- Professional Documentation Samples
+- Blog (Coming Soon)
+- Contact & Inquiry Forms
 
 ## Tech Stack
 
-- **Static Site Generator**: [11ty (Eleventy)](https://www.11ty.dev/)
+- **Framework**: [Next.js 14](https://nextjs.org/) with App Router
+- **Language**: TypeScript (strict mode)
 - **CSS Framework**: [Tailwind CSS v3](https://tailwindcss.com/)
-- **Syntax Highlighting**: Prism.js (via 11ty plugin)
-- **JavaScript**: Vanilla JS (no framework)
-- **Hosting**: AWS S3 + CloudFront OR Netlify
-- **Email**: ConvertKit/Mailchimp integration ready
-- **Forms**: Netlify Forms (or custom backend)
+- **MDX Support**: [@next/mdx](https://nextjs.org/docs/app/building-your-application/configuring/mdx)
+- **Deployment**: GitHub Actions → FTP to HostPinnacle
+- **Build Output**: Static export (`output: 'export'`)
 
 ## Features
 
- **Responsive Design** - Mobile-first, works on all devices
- **Fast Performance** - Optimized for 3G networks (East Africa focus)
- **SEO Optimized** - Meta tags, Open Graph, Twitter Cards
- **Code Syntax Highlighting** - Beautiful code blocks for tutorials
- **Newsletter Integration** - Email capture forms throughout
- **Blog with Categories** - AWS, Healthcare, Kubernetes, Career
- **Prominent "Hire Me" CTA** - Consulting page with contact form
- **About Page** - Full story and credentials
- **Resources Page** - Free downloads and recommendations
- **Legal Pages** - Privacy Policy and Terms of Service
+✅ **Responsive Design** - Mobile-first, works on all devices
+✅ **Portfolio Showcase** - Real projects with metrics and testimonials
+✅ **Documentation Samples** - Professional API documentation samples
+✅ **Services Page** - Clear service offerings and pricing
+✅ **About Page** - Professional background and credentials
+✅ **Contact Form** - Direct inquiry submission
+✅ **SEO Optimized** - Meta tags and semantic HTML
+✅ **Fast Performance** - Static site generation for speed
+✅ **TypeScript** - Type-safe development
 
 ## Project Structure
 
 ```
 stellaoiro/
-├── src/
-│   ├── _includes/
-│   │   ├── layouts/
-│   │   │   ├── base.njk           # Base HTML template
-│   │   │   ├── page.njk           # Static page layout
-│   │   │   └── post.njk           # Blog post layout
-│   │   └── components/
-│   │       ├── nav.njk            # Navigation component
-│   │       ├── footer.njk         # Footer component
+├── app/                          # Next.js App Router
+│   ├── layout.tsx               # Root layout (Header, Footer)
+│   ├── page.tsx                 # Homepage
+│   ├── about/                   # About page
+│   ├── services/                # Services page
+│   ├── portfolio/               # Portfolio page
+│   │   └── samples/             # Documentation samples
+│   │       └── api-documentation/  # EventHub API sample
+│   ├── blog/                    # Blog (in progress)
+│   ├── contact/                 # Contact page
+│   └── sitemap.ts              # Sitemap generation
+├── components/                  # React components (25+ components)
+│   ├── Header.tsx              # Main navigation
+│   ├── Footer.tsx              # Footer component
+│   ├── Hero.tsx                # Homepage hero
 │   │       └── newsletter-form.njk # Newsletter signup form
 │   ├── _data/
 │   │   └── site.json              # Site metadata and configuration
@@ -103,71 +108,47 @@ npm install
 npm run dev
 ```
 
-The site will be available at `http://localhost:8080`
+The site will be available at `http://localhost:3000`
 
 ### Available Scripts
 
 ```bash
-# Start development server with live reload and CSS watch
+# Start development server (http://localhost:3000)
 npm run dev
 
-# Build site for production
+# Build site for production (outputs to ./out/)
 npm run build
 
-# Build Tailwind CSS (production)
-npm run build:css
+# Start production server
+npm start
 
-# Clean build directory
-npm run clean
+# Lint code
+npm run lint
 ```
 
-## Creating New Blog Posts
+## Adding Portfolio Samples
 
-1. Create a new markdown file in `src/blog/posts/`:
+Portfolio samples are located in `app/portfolio/samples/`. Current samples include:
 
-```bash
-touch src/blog/posts/my-new-post.md
-```
+1. **EventHub API Documentation** - Complete RESTful API documentation with visual diagrams
 
-2. Add front matter:
+To add a new sample:
 
-```yaml
----
-title: "Your Post Title"
-description: "Brief description for SEO and social media"
-date: 2025-11-17
-author: Achar Oiro
-categories:
-  - AWS
-  - Healthcare
-tags:
-  - s3
-  - hipaa
-  - security
-featured: true
-image: https://example.com/image.jpg
-imageAlt: "Description of image"
-readTime: 10
-layout: layouts/post.njk
----
+1. Create directory: `app/portfolio/samples/[sample-name]/`
+2. Add `page.tsx` with the sample presentation
+3. Optionally add `.mdx` file with raw documentation content
+4. Update `app/portfolio/page.tsx` to add to the `samples` array
 
-Your content here...
-```
-
-3. Write your content using Markdown
-4. Code blocks with syntax highlighting:
-
-````markdown
-```python
-import boto3
-
-s3 = boto3.client('s3')
-```
-````
-
-5. Build and preview:
-```bash
-npm run build
+Example sample structure:
+```typescript
+{
+  title: 'Sample Title',
+  description: 'Brief description',
+  tags: ['Tag1', 'Tag2'],
+  features: ['Feature 1', 'Feature 2'],
+  link: '/portfolio/samples/sample-name',
+  type: 'Documentation Type',
+}
 ```
 
 ## Deployment

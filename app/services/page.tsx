@@ -33,7 +33,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-orange-50">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Technical Writing Services</h1>
@@ -81,12 +81,12 @@ export default function ServicesPage() {
       <ComparisonChart />
       <FAQ />
 
-      <section className="section-padding bg-gradient-to-r from-primary to-#E8956F">
+      <section className="section-padding bg-gradient-to-r from-primary to-primary-light">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl mb-8 opacity-90">Get a free documentation audit and personalized quote for your project.</p>
-            <Link href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-strong transition-all duration-200">
+            <Link href="/contact" className="inline-block bg-white text-primary font-medium px-8 py-4 rounded-lg hover:shadow-md transition-all duration-200">
               Schedule Free Consultation
             </Link>
           </div>

@@ -21,7 +21,7 @@ export default function ComparisonChart() {
         </div>
         
         <div className="overflow-x-auto">
-          <table className="w-full bg-white/80 backdrop-blur-sm rounded-xl shadow-soft border border-white/30">
+          <table className="w-full bg-white/95 backdrop-blur-sm rounded-xl shadow-sm border border-white/30">
             <thead>
               <tr className="border-b border-gray-200">
                 <th className="text-left p-6 font-bold text-gray-900">Feature</th>

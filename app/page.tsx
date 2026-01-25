@@ -8,7 +8,6 @@ import ProcessSteps from '@/components/ProcessSteps'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
 import CTA from '@/components/CTA'
 import FloatingCTA from '@/components/FloatingCTA'
-import SocialProof from '@/components/SocialProof'
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       <TestimonialCarousel />
       <CTA />
       <FloatingCTA />
-      <SocialProof />
     </>
   )
 }

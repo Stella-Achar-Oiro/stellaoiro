@@ -2,22 +2,25 @@ import Link from 'next/link'
 
 const projects = [
   {
-    title: 'PayGate API Documentation',
-    description: 'Complete REST API documentation with interactive examples and SDKs in 5 languages.',
-    tags: ['API Docs', 'OpenAPI', 'Code Samples'],
-    result: '40% reduction in support tickets',
+    title: 'Healthcare AI Platform API Documentation',
+    description: 'Comprehensive API documentation for medical transcription system. Created authentication flows, endpoint references, and HIPAA compliance guides with code samples in Python, JavaScript, and cURL.',
+    tags: ['API Documentation', 'Healthcare', 'HIPAA', 'Python'],
+    result: 'Reduced developer onboarding from 3 weeks to 5 days',
+    technologies: 'Python, REST APIs, AWS Lambda, OpenAPI/Swagger',
   },
   {
-    title: 'MedFlow EHR Onboarding',
-    description: 'User onboarding guides and admin documentation for healthcare SaaS platform.',
-    tags: ['User Guides', 'Healthcare', 'HIPAA'],
-    result: '60% faster user onboarding',
+    title: 'Cloud Infrastructure Documentation',
+    description: 'Architecture documentation and deployment guides for AWS-based healthcare platform. Documented containerized microservices, CI/CD pipelines, and disaster recovery procedures.',
+    tags: ['Cloud Architecture', 'AWS', 'DevOps', 'Kubernetes'],
+    result: 'Deployment time reduced from 4 hours to 45 minutes',
+    technologies: 'AWS (EC2, ECS, Lambda), Docker, Kubernetes, Terraform',
   },
   {
-    title: 'CloudMed Documentation Overhaul',
-    description: 'Restructured and rewrote entire documentation site for cloud healthcare platform.',
-    tags: ['Information Architecture', 'Migration', 'SEO'],
-    result: '3x increase in doc engagement',
+    title: 'Social Impact Platform Technical Guides',
+    description: 'Developer documentation for blockchain-based GBV prevention platform. Created smart contract docs, API integration guides, and system overviews for NGO partners.',
+    tags: ['Blockchain', 'Social Impact', 'Developer Guides'],
+    result: 'Platform served 847 survivors across 5 NGO partners',
+    technologies: 'Blockchain, Smart Contracts, REST APIs, Python',
   },
 ]
 
@@ -35,8 +38,8 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl blur-xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-white/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-xl blur-lg"></div>
+              <div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-sm hover:shadow-sm transition-all duration-300 border border-white/30">
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -45,6 +48,10 @@ export default function Portfolio() {
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="mb-4">
+                <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Technologies</p>
+                <p className="text-sm text-gray-700">{project.technologies}</p>
               </div>
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm font-semibold text-green-600">{project.result}</p>

@@ -1,0 +1,448 @@
+---
+title: "Sample API & Developer Documentation"
+subtitle: "EventHub API v2.0"
+description: "RESTful API for managing events, registrations, and attendee data"
+category: "API Documentation Sample"
+---
+
+# EventHub API Documentation
+
+**Version:** 2.0
+**Last Updated:** January 2025
+
+## Introduction
+
+### Purpose
+
+The EventHub API enables developers to integrate event management capabilities into their applications. With this API, you can:
+
+- Create and manage events
+- Handle attendee registrations
+- Process ticket sales
+- Retrieve analytics and reports
+- Send notifications to participants
+
+### Intended Audience
+
+This documentation is designed for software developers and technical teams integrating EventHub functionality into web or mobile applications. Basic familiarity with RESTful APIs, HTTP methods, and JSON is recommended.
+
+### Key Features
+
+| Feature | Description |
+|---------|-------------|
+| **RESTful Architecture** | Standard HTTP methods (GET, POST, PUT, DELETE) |
+| **JSON Format** | All requests and responses use JSON |
+| **Webhook Support** | Real-time event notifications |
+| **Rate Limiting** | 1,000 requests per hour per API key |
+| **TLS Encryption** | All endpoints require HTTPS |
+
+---
+
+## Authentication
+
+EventHub API uses API key-based authentication. All API requests must include your unique API key in the request headers.
+
+### Obtaining Your API Key
+
+1. Log in to your EventHub dashboard
+2. Navigate to **Settings** → **API Keys**
+3. Click **Generate New Key**
+4. Copy and securely store your API key
+
+**⚠️ Security Warning:** Never expose your API key in client-side code or public repositories.
+
+### Authentication Headers
+
+Include your API key in every request using the `Authorization` header:
+
+```http
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+```
+
+### Example Authenticated Request
+
+```bash
+curl -X GET https://api.eventhub.example.com/v2/events \
+  -H "Authorization: Bearer eh_live_sk_abc123xyz789" \
+  -H "Content-Type: application/json"
+```
+
+---
+
+## Base URL & Versioning
+
+### Environment Endpoints
+
+| Environment | Base URL |
+|-------------|----------|
+| **Production** | `https://api.eventhub.example.com/v2` |
+| **Sandbox** | `https://sandbox-api.eventhub.example.com/v2` |
+
+### API Versioning
+
+The current API version is **v2**. The version is specified in the URL path:
+
+```
+https://api.eventhub.example.com/v2/events
+                                  ^^
+                            Version indicator
+```
+
+**Note:** We maintain backward compatibility for at least 12 months after releasing a new version.
+
+---
+
+## API Endpoints
+
+### Create Event
+
+Creates a new event in your EventHub account.
+
+**Endpoint:** `POST /v2/events`
+
+**Request Parameters**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `name` | string | Yes | Event name (max 200 characters) |
+| `description` | string | No | Event description (supports markdown) |
+| `start_time` | string | Yes | ISO 8601 datetime (e.g., `2025-02-15T10:00:00Z`) |
+| `end_time` | string | Yes | ISO 8601 datetime |
+| `location` | object | No | Event location details |
+| `location.venue` | string | No | Venue name |
+| `location.address` | string | No | Full address |
+| `location.city` | string | No | City |
+| `location.country` | string | No | ISO 3166-1 alpha-2 country code |
+| `capacity` | integer | No | Maximum number of attendees |
+| `is_public` | boolean | No | Whether event is publicly visible (default: `true`) |
+| `tags` | array | No | Array of tags for categorization |
+
+**Example Request**
+
+```bash
+curl -X POST https://api.eventhub.example.com/v2/events \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Cloud Architecture Workshop",
+    "description": "Learn best practices for designing scalable cloud systems",
+    "start_time": "2025-02-15T10:00:00Z",
+    "end_time": "2025-02-15T17:00:00Z",
+    "location": {
+      "venue": "TechHub Conference Center",
+      "address": "123 Innovation Drive",
+      "city": "Nairobi",
+      "country": "KE"
+    },
+    "capacity": 150,
+    "is_public": true,
+    "tags": ["cloud", "architecture", "workshop"]
+  }'
+```
+
+**Example Response**
+
+```json
+{
+  "success": true,
+  "data": {
+    "event_id": "evt_2nQX8yHj9mKL3pR5",
+    "name": "Cloud Architecture Workshop",
+    "description": "Learn best practices for designing scalable cloud systems",
+    "start_time": "2025-02-15T10:00:00Z",
+    "end_time": "2025-02-15T17:00:00Z",
+    "location": {
+      "venue": "TechHub Conference Center",
+      "address": "123 Innovation Drive",
+      "city": "Nairobi",
+      "country": "KE",
+      "coordinates": {
+        "latitude": -1.286389,
+        "longitude": 36.817223
+      }
+    },
+    "capacity": 150,
+    "registered_count": 0,
+    "is_public": true,
+    "tags": ["cloud", "architecture", "workshop"],
+    "status": "draft",
+    "created_at": "2025-01-15T08:30:00Z",
+    "updated_at": "2025-01-15T08:30:00Z",
+    "url": "https://eventhub.example.com/events/evt_2nQX8yHj9mKL3pR5"
+  }
+}
+```
+
+**Response Fields**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | boolean | Indicates if the request was successful |
+| `data.event_id` | string | Unique event identifier |
+| `data.status` | string | Event status: `draft`, `published`, `cancelled`, `completed` |
+| `data.registered_count` | integer | Current number of registrations |
+| `data.url` | string | Public event page URL |
+| `data.created_at` | string | ISO 8601 timestamp of creation |
+| `data.updated_at` | string | ISO 8601 timestamp of last update |
+
+---
+
+### Retrieve Event
+
+Retrieves details for a specific event.
+
+**Endpoint:** `GET /v2/events/{event_id}`
+
+**Path Parameters**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `event_id` | string | The unique event identifier |
+
+**Example Request**
+
+```bash
+curl -X GET https://api.eventhub.example.com/v2/events/evt_2nQX8yHj9mKL3pR5 \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+**Example Response**
+
+```json
+{
+  "success": true,
+  "data": {
+    "event_id": "evt_2nQX8yHj9mKL3pR5",
+    "name": "Cloud Architecture Workshop",
+    "description": "Learn best practices for designing scalable cloud systems",
+    "start_time": "2025-02-15T10:00:00Z",
+    "end_time": "2025-02-15T17:00:00Z",
+    "location": {
+      "venue": "TechHub Conference Center",
+      "address": "123 Innovation Drive",
+      "city": "Nairobi",
+      "country": "KE"
+    },
+    "capacity": 150,
+    "registered_count": 47,
+    "is_public": true,
+    "tags": ["cloud", "architecture", "workshop"],
+    "status": "published",
+    "created_at": "2025-01-15T08:30:00Z",
+    "updated_at": "2025-01-20T14:22:00Z"
+  }
+}
+```
+
+---
+
+### Register Attendee
+
+Registers an attendee for an event.
+
+**Endpoint:** `POST /v2/events/{event_id}/registrations`
+
+**Request Parameters**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `email` | string | Yes | Attendee's email address |
+| `first_name` | string | Yes | First name |
+| `last_name` | string | Yes | Last name |
+| `phone` | string | No | Phone number (E.164 format recommended) |
+| `company` | string | No | Company/organization name |
+| `ticket_type` | string | No | Ticket type identifier (if applicable) |
+| `custom_fields` | object | No | Additional custom data |
+
+**Example Request**
+
+```bash
+curl -X POST https://api.eventhub.example.com/v2/events/evt_2nQX8yHj9mKL3pR5/registrations \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "developer@example.com",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "phone": "+254712345678",
+    "company": "TechCorp Solutions",
+    "ticket_type": "early_bird"
+  }'
+```
+
+**Example Response**
+
+```json
+{
+  "success": true,
+  "data": {
+    "registration_id": "reg_8kL3nM9pQ2rT5vX7",
+    "event_id": "evt_2nQX8yHj9mKL3pR5",
+    "attendee": {
+      "email": "developer@example.com",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "phone": "+254712345678",
+      "company": "TechCorp Solutions"
+    },
+    "ticket_type": "early_bird",
+    "confirmation_code": "CLOUD2025-A47B",
+    "status": "confirmed",
+    "registered_at": "2025-01-20T15:30:00Z",
+    "qr_code_url": "https://api.eventhub.example.com/v2/registrations/reg_8kL3nM9pQ2rT5vX7/qr"
+  }
+}
+```
+
+---
+
+## Error Handling
+
+EventHub API uses conventional HTTP response codes to indicate success or failure.
+
+### HTTP Status Codes
+
+| Status Code | Meaning |
+|-------------|---------|
+| `200 OK` | Request succeeded |
+| `201 Created` | Resource created successfully |
+| `400 Bad Request` | Invalid request parameters |
+| `401 Unauthorized` | Missing or invalid API key |
+| `403 Forbidden` | API key lacks required permissions |
+| `404 Not Found` | Requested resource doesn't exist |
+| `429 Too Many Requests` | Rate limit exceeded |
+| `500 Internal Server Error` | Server error (contact support) |
+| `503 Service Unavailable` | Temporary server issue |
+
+### Error Response Format
+
+All errors return a JSON object with the following structure:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "invalid_parameter",
+    "message": "The 'start_time' parameter must be a valid ISO 8601 datetime",
+    "param": "start_time",
+    "request_id": "req_9mK3nL8pQ2rT"
+  }
+}
+```
+
+### Common Error Codes
+
+| Error Code | Description | Resolution |
+|------------|-------------|------------|
+| `invalid_api_key` | API key is missing or invalid | Check your API key in the dashboard |
+| `invalid_parameter` | Request parameter is invalid | Review parameter requirements |
+| `resource_not_found` | Requested resource doesn't exist | Verify the resource ID |
+| `rate_limit_exceeded` | Too many requests | Wait before retrying or upgrade plan |
+| `capacity_exceeded` | Event is at full capacity | Check event capacity settings |
+| `duplicate_registration` | Attendee already registered | Update existing registration instead |
+
+### Example Error Response
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "rate_limit_exceeded",
+    "message": "You have exceeded the rate limit of 1000 requests per hour",
+    "retry_after": 1800,
+    "request_id": "req_7nL2mK9pQ8rT"
+  }
+}
+```
+
+---
+
+## Best Practices & Notes
+
+### Rate Limits
+
+- **Standard Plan:** 1,000 requests per hour
+- **Pro Plan:** 5,000 requests per hour
+- **Enterprise:** Custom limits available
+
+**Headers:**
+- `X-RateLimit-Limit`: Maximum requests allowed per hour
+- `X-RateLimit-Remaining`: Requests remaining in current window
+- `X-RateLimit-Reset`: Timestamp when the rate limit resets
+
+### Security Recommendations
+
+✅ **DO:**
+- Store API keys in environment variables or secure vaults
+- Use HTTPS for all API requests
+- Implement webhook signature verification
+- Rotate API keys periodically (every 90 days recommended)
+- Use the sandbox environment for testing
+
+❌ **DON'T:**
+- Hard-code API keys in source code
+- Share API keys in public repositories
+- Use production API keys in client-side JavaScript
+- Ignore error responses and retry limits
+
+### Pagination
+
+List endpoints support pagination using these parameters:
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `page` | integer | 1 | Page number |
+| `limit` | integer | 20 | Items per page (max: 100) |
+
+**Example:**
+```bash
+GET /v2/events?page=2&limit=50
+```
+
+### Idempotency
+
+For `POST` requests, include an `Idempotency-Key` header to prevent duplicate operations:
+
+```http
+Idempotency-Key: unique-key-12345
+```
+
+### Webhook Notifications
+
+Configure webhooks to receive real-time notifications for events:
+
+- `event.created`
+- `event.updated`
+- `registration.completed`
+- `registration.cancelled`
+
+Webhook setup available in your dashboard under **Settings** → **Webhooks**.
+
+### Testing
+
+Use the **sandbox environment** for development and testing:
+
+```
+Base URL: https://sandbox-api.eventhub.example.com/v2
+```
+
+Sandbox API keys start with `eh_test_` prefix.
+
+### Support
+
+- **Documentation:** https://docs.eventhub.example.com
+- **API Status:** https://status.eventhub.example.com
+- **Support Email:** api-support@eventhub.example.com
+- **Response Time:** Within 24 hours for standard support
+
+---
+
+**Document Version:** 2.0.1
+**Last Updated:** January 15, 2025
+**Author:** Technical Writing Team
+
+---
+
+*This is a sample API documentation created for portfolio purposes. EventHub is a fictional product. All examples use placeholder data.*
