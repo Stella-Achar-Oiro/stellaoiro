@@ -83,6 +83,23 @@ const projects: Project[] = [
 
 const samples: Sample[] = [
   {
+    title: 'Healthcare Sepsis Prediction API Documentation',
+    description: 'Production-ready API documentation for FastAPI sepsis risk prediction service with 87% accuracy. Real healthcare system serving clinical environments.',
+    tags: ['Production API', 'Healthcare', 'FastAPI', 'JSON Schema', 'Machine Learning'],
+    features: [
+      'Real production system (87% prediction accuracy)',
+      '12-14 pages of comprehensive API documentation',
+      'Production-quality JSON examples with 4 clinical scenarios',
+      'Complete error handling taxonomy with actionable messages',
+      'Integration guide with real Python/JavaScript code samples',
+      'Documentation architecture strategy and impact metrics',
+      '70% faster integration, 60% fewer support tickets',
+      'Architecture diagrams and system design documentation',
+    ],
+    link: '/portfolio/samples/healthcare-api',
+    type: 'Production API Documentation',
+  },
+  {
     title: 'EventHub API Documentation',
     description: 'Complete RESTful API documentation sample for an event management platform, showcasing developer-focused technical writing.',
     tags: ['API Reference', 'REST', 'Authentication', 'Error Handling'],
@@ -95,7 +112,7 @@ const samples: Sample[] = [
       'Rate limiting and pagination documentation',
     ],
     link: '/portfolio/samples/api-documentation',
-    type: 'API Documentation',
+    type: 'API Documentation Sample',
   },
 ]
 
@@ -237,15 +254,28 @@ export default function PortfolioPage() {
                       </svg>
                       View Full Sample
                     </Link>
-                    <a
-                      href="#download"
-                      className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary font-medium px-6 py-3 rounded-lg hover:bg-primary/5 transition-all duration-200"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      Download PDF
-                    </a>
+                    {sample.title.includes('Healthcare') ? (
+                      <a
+                        href="/portfolio/healthcare-api-documentation.pdf"
+                        download
+                        className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary font-medium px-6 py-3 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download PDF
+                      </a>
+                    ) : (
+                      <a
+                        href="#download"
+                        className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary font-medium px-6 py-3 rounded-lg hover:bg-primary/5 transition-all duration-200 opacity-50 cursor-not-allowed"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download PDF
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

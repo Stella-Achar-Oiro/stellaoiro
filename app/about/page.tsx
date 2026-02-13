@@ -3,7 +3,7 @@ import Link from 'next/link'
 const timeline = [
   { year: '2011', title: 'Healthcare Sector Entry', description: 'Began career in Kenya\'s healthcare sector, gaining deep understanding of medical workflows and clinical systems.' },
   { year: '2018', title: 'Software Development', description: 'Transitioned to software development, building healthcare technology solutions with Python and cloud platforms.' },
-  { year: '2021', title: 'Cloud Engineering', description: 'Specialized in AWS infrastructure for healthcare platforms. Earned AWS Solutions Architect certification.' },
+  { year: '2021', title: 'Software Engineering', description: 'Specialized in AWS infrastructure for healthcare platforms. Earned AWS Solutions Architect certification.' },
   { year: '2022', title: 'AWS Community Builder', description: 'Recognized by AWS for contributions to cloud community and technical content. Co-founded Evarest Technologies Ltd.' },
   { year: '2023', title: 'Technical Writing Focus', description: 'Combined development and writing skills. Published 25,000+ words on healthcare APIs, cloud architecture, and Kubernetes.' },
   { year: '2024', title: 'Healthcare Documentation Specialist', description: 'Full-time technical writing for healthcare technology companies. Specializing in API docs and cloud infrastructure documentation.' },

@@ -83,7 +83,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: "Cloud Infrastructure Documentation for HealthTech Platform",
     description: "Architecture documentation and deployment guides for AWS-based healthcare technology infrastructure. Documented containerized microservices, CI/CD pipelines, and disaster recovery procedures.",
-    role: "Cloud Engineer & Technical Writer",
+    role: "Software Engineer & Technical Writer",
     technologies: ["AWS (EC2, ECS, Lambda, S3, RDS)", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     tags: ["Cloud Architecture", "DevOps", "Infrastructure as Code"],
     challenge: "Healthcare platform running on AWS lacked infrastructure documentation. Deployment required manual intervention, taking 4+ hours and causing frequent configuration drift.",

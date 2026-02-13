@@ -457,4 +457,4 @@ This is a personal blog, but if you find issues or have suggestions:
 
 ---
 
-**Built with ❤️ by Achar Oiro | AWS Community Builder | Cloud Engineer**
+**Built with ❤️ by Achar Oiro | AWS Community Builder | Software Engineer**
