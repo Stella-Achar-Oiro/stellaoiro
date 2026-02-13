@@ -206,7 +206,7 @@ export default function ContactPage() {
                     Book a time that works for you. We'll discuss your documentation needs and I'll provide personalized recommendations.
                   </p>
                   <a 
-                    href="https://calendly.com/stellaoiro" 
+                    href="https://calendly.com/stellaacharoiro/30min" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="btn-primary w-full text-center block"
