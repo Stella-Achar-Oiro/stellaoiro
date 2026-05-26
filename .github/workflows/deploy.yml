@@ -1,35 +1,55 @@
-name: Deploy to HostPinnacle
+name: CI / CD
 
 on:
   push:
-    branches:
-      - main
+    branches: ['**']
   pull_request:
-    branches:
-      - main
+    branches: [main, develop]
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  # ── Build & lint — runs on every push and every PR ──────────────────────
+  build:
+    name: Build & lint
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
         run: npm run build
 
-      - name: Deploy to HostPinnacle via FTP
+      - name: Upload build artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out/
+          retention-days: 1
+
+  # ── Deploy — runs only when a commit lands on main ───────────────────────
+  deploy:
+    name: Deploy to HostPinnacle
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artefact
+        uses: actions/download-artifact@v4
+        with:
+          name: out
+          path: out/
+
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
