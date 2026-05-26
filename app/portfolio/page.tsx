@@ -1,4 +1,3 @@
-import MetricsCard from '@/components/MetricsCard'
 import Link from 'next/link'
 
 interface Project {
@@ -173,7 +172,15 @@ export default function PortfolioPage() {
                       </svg>
                       Results & Impact
                     </h3>
-                    <MetricsCard metrics={project.metrics} />
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {project.metrics.map((metric) => (
+                        <div key={metric.label} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                          <div className="text-sm text-gray-600 mb-2">{metric.label}</div>
+                          <div className="text-3xl font-bold text-gray-900 mb-1">{metric.value}</div>
+                          <div className="text-sm font-semibold text-green-600">{metric.change}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border-l-4 border-primary">

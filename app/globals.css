@@ -6,53 +6,61 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-white text-gray-900;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    background-color: #FFFFF8;
+    color: #1A1A18;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md;
+    @apply font-mono text-sm px-7 py-3 bg-primary text-white border-none rounded tracking-wide transition-colors duration-200 hover:bg-primary-dark;
   }
-  
-  .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary border border-gray-200 font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:border-primary;
+
+  .btn-ghost {
+    @apply font-mono text-sm px-7 py-3 bg-transparent text-ink-muted border border-border rounded tracking-wide transition-all duration-200 hover:border-primary hover:text-primary;
   }
-  
-  .card {
-    @apply bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
-  }
-  
+
   .section-padding {
-    @apply py-24 px-6;
+    @apply py-20 px-6;
   }
-  
+
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-6xl mx-auto px-8;
+  }
+
+  .section-label {
+    @apply font-mono text-[10px] tracking-[2px] uppercase text-ink-hint mb-8 flex items-center gap-3;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: #D8D5CC;
   }
 }
 
 @layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
-  
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
-  }
-}
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+  @keyframes blink {
+    50% { opacity: 0; }
   }
-}
 
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .animate-fade-up {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
   }
 }

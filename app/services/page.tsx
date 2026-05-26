@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import PricingTable from '@/components/PricingTable'
-import ComparisonChart from '@/components/ComparisonChart'
-import FAQ from '@/components/FAQ'
 
 const services = [
   {
@@ -76,10 +73,6 @@ export default function ServicesPage() {
 
         </div>
       </section>
-
-      <PricingTable />
-      <ComparisonChart />
-      <FAQ />
 
       <section className="section-padding bg-gradient-to-r from-primary to-primary-light">
         <div className="container-custom">
