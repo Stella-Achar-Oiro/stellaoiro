@@ -49,16 +49,13 @@ jobs:
           name: out
           path: out/
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          local-dir: ./out/
-          server-dir: ./public_html/
-          timeout: 300000
-          dangerous-clean-slate: true
-          log-level: verbose
+          port: 22
+          local_path: './out/*'
+          remote_path: '/home/stellaoi/public_html'
+          sftp_only: true
