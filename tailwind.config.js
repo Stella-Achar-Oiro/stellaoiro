@@ -8,31 +8,33 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#7C3AED',
-          dark: '#5B21B6',
-          light: '#8B5CF6',
+          DEFAULT: '#D85A30',
+          dark: '#993C1D',
+          deep: '#712B13',
+          light: '#FAECE7',
+          mid: '#F0997B',
         },
-        dark: {
-          DEFAULT: '#0F1419',
-          lighter: '#1A1F26',
+        amber: {
+          DEFAULT: '#BA7517',
+          dark: '#854F0B',
+          light: '#FAEEDA',
         },
-        gray: {
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827',
+        ink: {
+          DEFAULT: '#1A1A18',
+          muted: '#4A4A46',
+          hint: '#888780',
+        },
+        surface: '#FFFFFF',
+        bg: '#FFFFF8',
+        border: {
+          DEFAULT: '#D8D5CC',
+          lt: '#ECEAE4',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Source Serif Pro', 'Georgia', 'serif'],
-        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
+        mono: ['var(--font-mono)', 'Consolas', 'monospace'],
       },
       fontSize: {
         'display': ['4.5rem', { lineHeight: '1.1', fontWeight: '700' }],

@@ -1,47 +1,18 @@
-import Link from 'next/link'
-
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-100">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Stella Oiro</h3>
-            <p className="text-gray-600 mb-6">Technical writer specializing in API documentation, developer guides, and SaaS documentation.</p>
-            <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/stella-achar-oiro/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">LinkedIn</a>
-              <a href="https://github.com/Stella-Achar-Oiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">GitHub</a>
-              <a href="https://x.com/Stella_Oiro" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">Twitter</a>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><Link href="/services#api" className="text-gray-600 hover:text-primary transition-colors">API Documentation</Link></li>
-              <li><Link href="/services#developer" className="text-gray-600 hover:text-primary transition-colors">Developer Guides</Link></li>
-              <li><Link href="/services#saas" className="text-gray-600 hover:text-primary transition-colors">SaaS Documentation</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-600 hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/portfolio" className="text-gray-600 hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/blog" className="text-gray-600 hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-gray-600 hover:text-primary transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-sm">© 2025 Stella Oiro. All rights reserved.</p>
-          <div className="flex gap-6 text-sm">
-            <Link href="/privacy" className="text-gray-600 hover:text-primary transition-colors">Privacy</Link>
-            <Link href="/terms" className="text-gray-600 hover:text-primary transition-colors">Terms</Link>
-          </div>
-        </div>
+    <footer className="bg-ink text-white/50 py-10 text-[13px]">
+      <div className="max-w-6xl mx-auto px-8 flex items-center justify-between flex-wrap gap-4">
+        <span className="font-serif italic text-[18px] text-white/80">Stella Achar Oiro</span>
+
+        <ul className="flex gap-6 list-none">
+          <li><a href="#projects" className="font-mono text-[11px] tracking-[0.5px] text-white/40 no-underline hover:text-primary-mid transition-colors">Projects</a></li>
+          <li><a href="/portfolio" className="font-mono text-[11px] tracking-[0.5px] text-white/40 no-underline hover:text-primary-mid transition-colors">Portfolio</a></li>
+          <li><a href="/about" className="font-mono text-[11px] tracking-[0.5px] text-white/40 no-underline hover:text-primary-mid transition-colors">About</a></li>
+          <li><a href="https://dev.to/stellaacharoiro" target="_blank" rel="noopener noreferrer" className="font-mono text-[11px] tracking-[0.5px] text-white/40 no-underline hover:text-primary-mid transition-colors">DEV.to</a></li>
+          <li><a href="/contact" className="font-mono text-[11px] tracking-[0.5px] text-white/40 no-underline hover:text-primary-mid transition-colors">Contact</a></li>
+        </ul>
+
+        <span className="font-mono text-[11px]">&copy; 2026 Stella Achar Oiro</span>
       </div>
     </footer>
   )
